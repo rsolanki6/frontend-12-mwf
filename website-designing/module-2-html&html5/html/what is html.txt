@@ -1,0 +1,31 @@
+what is html ?
+ html is stands for hypertext markup language 
+ html is first time released by tim berner lee in 1986
+ html is used to create a website Home page and webpages 
+ html file extension .htm or .html 
+ html provides its structures i.e called skelton or boiler plate or structures of html 
+
+ what is boiler plate in html ? 
+
+<!DOCTYPE html>  ...this is a starter of html and html5 
+<html>
+  <head>
+     <title></title>
+     <meta charset="utf-8" />
+     <meta content="" />
+     <meta  property="og:title" content="">
+     <meta  property="og:descriptions" content="">
+     <meta  property="og:url" content="">
+     <meta  property="og:image" content="">
+     <link rel="stylesheet" href="" type="text/css" />
+     <link rel="icon" href="" type="text/x-icon" />
+     <style type="text/css"></style>
+     <script type="text/javascript"></script>
+     <noscript></noscript> 
+  </head>
+
+<body>
+
+</body>
+
+</html>
