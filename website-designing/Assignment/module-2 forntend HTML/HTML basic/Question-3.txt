@@ -1,0 +1,42 @@
+What is the difference between block-level element and inline element in HTML? provide examples of each.
+    In HTML, element are categorized as either block-level or inline based on their default behavior and how they interact with other element
+    on the page.
+
+    Block-level Element :-
+
+        *Behavior :-
+            Block-level element always start on a new line and take up the full available width of their parent container. They inherently create
+            a line break before and after themselves.
+
+        *Dimensions :-
+            They can have their width, height, margines, and padding explicitly set.
+
+        *Containment :-
+            They can contain other block-level element and inline element.
+
+        *Ex :-
+            <div> :- A generic container for flow content.
+            <p> :- Represents a paragraph of text.
+            <h1> - <h6> :- Heading elements.
+            <ul> - <ol>, <li> :- List elements.
+            <form> :- A form for user input. 
+
+
+    Inline Element :-
+
+        *Behavior :- 
+            inline element do not start on a new line and only take up as much width as necessary to contain their content. They flow within the text
+            content of their parent element.
+
+        *Dimensions :- 
+            They generally cannot have their width or height explicitly set. vetical margins and padding may not be applied as expected.
+
+        *Containment :-
+            They can only contain data and other inline elements, not block-level element.
+
+        *Ex :-
+            <span> :- A generic inline container used to apply styles to a small part of text.
+            <a> :- An anchor element for creating hyperlinks.
+            <strong>, <em> :- Elements for emphasizing text.
+            <img> :- An image element.
+            <input>, <label>, <select> :- Form input elements.

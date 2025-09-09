@@ -1,0 +1,42 @@
+Explain the basic strcture of an HTML document. identify the mandatory tags and their purpose.
+    An HTML document follows a hierarchical structure, beginning with a declaration and then containing nested elements that define the content and its presentation.
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document Title</title>
+    </head>
+    <body>
+        <!-- Visible content goes here -->
+    </body>
+    </html>
+
+
+    Mandatory Tags and THeir Purposes :-
+        <!DOCTYPE html> :-
+        This is a document type declaration, not an HTML tag. it informs the web browser about the HTML version being used,
+        ensuring the browser renders the page in "standards mode" (HTML5 in this case) rather than "quirks mode".
+
+        <html> :-
+        This is the root element of an HTML page. All other element including the <head> and <body>, are nested within it. 
+        The lang attribute (e.g. lang="en") specifies the primary language of the document, which is important for accessibility
+        and search engine optimization.
+
+        <head> :-
+        This element contains metadata about the HTML document that is not directly Visibleon the web page itself. This includes :-
+
+            *<meta charset="UTF-8"> :- 
+            specifies the character encoding for the document, ensuring proper display of various characters.UTF-8 is the recommended encoding.
+
+            *<meta name="viewpoint" content="width=device-width, initial-scale=1.0"> :-
+            Configures the viewpoint for responsive design, controlling how the page scales on different devices.
+
+            *<title> :-
+            Defines the title of the HTML document, which appears in the browser's title bar or tab. This is also used by search engines and when
+            bookmarking a page.
+
+        <body> :-
+        This element contains all the Visible content of the web page, including text, images, links, forms, and other interactive elements.
+        This is where the main content that users see and interact with resides.

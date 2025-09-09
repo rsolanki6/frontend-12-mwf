@@ -1,0 +1,7 @@
+Define HTML. What is the perpose of HTML in web development?
+    HTML stands for hyper text markup language. is the standard markup language used to create and structure content on the world web.
+    it is not a programming language, but rather a system of "tags" and "element" that annotate text and other content to define how
+    it should be displayed nad organized by web browser.
+
+    The perpose of HTML in web development is to provide the fundamental strcture and content of web pages. it serves as the "skeleton"
+    upon which all other web techonologies, like CSS (for styling) and javaScript (for interactivity) are built.
