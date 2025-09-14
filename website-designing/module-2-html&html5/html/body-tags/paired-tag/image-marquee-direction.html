@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        div img{
+            width: 20%;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>marquee image with direction right</h2>
+    <div style="width: 30%; height: 500px;" >
+        <marquee direction="right" scrolldelay="20" scrollamount="100" onmouseover="return stop(this.value)" onmouseout="return start(this.value)">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        </marquee>
+    </div>
+
+<hr>
+
+    <h2>marquee image with direction left</h2>
+    <div style="width: 30%; height: 500px;" >
+        <marquee direction="left" scrolldelay="20" scrollamount="100" onmouseover="return stop(this.value)" onmouseout="return start(this.value)">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        </marquee>
+    </div>
+
+    <hr>
+
+    <h2>marquee image with direction up</h2>
+    <div style="width: 30%; height: 500px;" >
+        <marquee direction="up" scrolldelay="20" scrollamount="100" onmouseover="return stop(this.value)" onmouseout="return start(this.value)">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        </marquee>
+    </div>
+
+    <hr>
+
+    <h2>marquee image with direction down</h2>
+    <div style="width: 30%; height: 500px;" >
+        <marquee direction="down" scrolldelay="20" scrollamount="100" onmouseover="return stop(this.value)" onmouseout="return start(this.value)">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        </marquee>
+    </div>
+
+</body>
+</html>
