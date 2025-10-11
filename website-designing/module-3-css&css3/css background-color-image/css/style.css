@@ -1,0 +1,33 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(45deg,#100202, #0000ff);  
+    background: -moz-linear-gradient(45deg,#100202, #0000ff);  
+    background: -o-linear-gradient(45deg,#100202, #0000ff);  
+    background: linear-gradient(45deg,#100202, #0000ff);  
+}
+.slider{
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(rgba(25,0,0,0.5),rgba(100,0,0,0.8)), url('../image/slider.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.slider-txt{
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    text-align: center;
+    border-radius: 25px;
+    /* padding: 20px; */
+}
+
+.slider-txt a{
+    color: white;
+    text-decoration: none;
+}
