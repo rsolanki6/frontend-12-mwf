@@ -1,18 +1,265 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+<!-- What is CSS Selector? Provide example of element, class and ID selector.
+answer : CSS selector is used to access or provide style on our page that is called CSS selector.  
+
+
+    Class Selector :
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: slategrey;
+        }
+
+        .content{
+            width: 50%;
+            height: auto;
+            margin: auto;
+            margin-top: 5px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .content1{
+            width: 50%;
+            height: auto;
+            margin: auto;
+            margin-top: 5px;
+            padding: 20px;
+            background-color: chartreuse;
+        }
+
+        .content2{
+            width: 50%;
+            height: auto;
+            margin: auto;
+            margin-top: 5px;
+            padding: 20px;
+            background-color: navy;
+            color: white;
+            border-radius: 30px;
+        }
+
+        .font-style{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+        }
+
+        .box{
+            border-radius: 25px;
+        }
+
+        .box:hover{
+            background-color: black;
+            color: blue;
+        }
+
+
+
+    <div class="content box font-style">
+        <h1>class selector</h1>
+        <ul>
+            <li>class selector is a type of selector</li>
+            <li>class selector is called via .(dot) symbol</li>
+            <li>class is not unique so it can use multiple times in one code/section</li>
+            <li>class selector provides 2 different style in our webpage</li>
+            <li>
+                .{
+                    property: value;
+                }
+            </li>
+        </ul>
+    </div>
+
+    <div class="content1">
+        <h1>class selector</h1>
+        <ul>
+            <li>class selector is a type of selector</li>
+            <li>class selector is called via .(dot) symbol</li>
+            <li>class is not unique so it can use multiple times in one code/section</li>
+            <li>class selector provides 2 different style in our webpage</li>
+            <li>
+                .{
+                    property: value;
+                }
+            </li>
+        </ul>
+    </div>
+
+    <div class="content2">
+        <h1>class selector</h1>
+        <ul>
+            <li>class selector is a type of selector</li>
+            <li>class selector is called via .(dot) symbol</li>
+            <li>class is not unique so it can use multiple times in one code/section</li>
+            <li>class selector provides 2 different style in our webpage</li>
+            <li>
+                .{
+                    property: value;
+                }
+            </li>
+        </ul>
+    </div>
+
+
+-----------------------------------------------------------------------------------------
+
+
+    Element Selector :
+
+        <style>
+        * {
+            margin: 0;
+            padding: 0;    
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: darkcyan    
+        }
+        div{
+            width: 50%;
+            height: auto;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            margin-top: 5%;    
+        }
+        h1{
+         color: green;   
+         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+    </head>
+    <body>
+
+
+    <div>
+        <h1>Element selector examples</h1>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero labore veniam earum eos, delectus eum ullam exercitationem maiores dolore doloremque tempora, impedit odio cumque omnis aut nostrum quis minus minima.</p>
+    </div>
+
+    <div>
+        <h1>Get in touch with us</h1>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero labore veniam earum eos, delectus eum ullam exercitationem maiores dolore doloremque tempora, impedit odio cumque omnis aut nostrum quis minus minima.</p>
+    </div>
+
+
+
+    <div>
+        <h1>Get in touch with us</h1>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero labore veniam earum eos, delectus eum ullam exercitationem maiores dolore doloremque tempora, impedit odio cumque omnis aut nostrum quis minus minima.</p>
+    </div>
+
+    <div>
+        <h1>Get in touch with us</h1>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero labore veniam earum eos, delectus eum ullam exercitationem maiores dolore doloremque tempora, impedit odio cumque omnis aut nostrum quis minus minima.</p>
+    </div>
+
+    </body>
+
+
+-----------------------------------------------------------------------------------------
+
+
+    ID Selector :
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            background: gray;
+        }
+
+        #content{
+            width: 50%;
+            height: auto;
+            margin: auto;
+            margin-top: 5%;
+            background-color: white;
+            color: navy;
+            padding: 20px;
+        }
+
+        #content1{
+            width: 50%;
+            height: auto;
+            margin: auto;
+            margin-top: 5%;
+            background-color: springgreen;
+            padding: 20px;
+        }
+
+        #content2{
+            width: 50%;
+            height: auto;
+            margin: auto;
+            margin-top: 5%;
+            background-color: blueviolet;
+            color: snow;
+            padding: 20px;
+        }
+
+    </style>
+
 </head>
 <body>
 
+    <div id="content">
+        <h1>ID selector</h1>
+            <ul>
+                <li>id selector is type of css selector</li>
+                <li>id selector is called via #(hash) symbol</li>
+                <li>id is unique and it can not be repeated</li>
+                <li>id selector provides 2 different styles in our webpage</li>
+                <li>
+                    #{
+                        property: value;
+                    }
+                </li>
+            </ul>
+    </div>
 
-    <h1>What is CSS Selector? Provide example of element, class and ID selector.</h1> <br>
-    <h2>answer : CSS selector is used to access or provide style on our page that is called CSS selector.</h2> 
+    <div id="content1">
+        <h1>ID selector</h1>
+            <ul>
+                <li>id selector is type of css selector</li>
+                <li>id selector is called via #(hash) symbol</li>
+                <li>id is unique and it can not be repeated</li>
+                <li>id selector provides 2 different styles in our webpage</li>
+                <li>
+                    #{
+                        property: value;
+                    }
+                </li>
+            </ul>
+    </div>
 
+    <div id="content2">
+        <h1>ID selector</h1>
+            <ul>
+                <li>id selector is type of css selector</li>
+                <li>id selector is called via #(hash) symbol</li>
+                <li>id is unique and it can not be repeated</li>
+                <li>id selector provides 2 different styles in our webpage</li>
+                <li>
+                    #{
+                        property: value;
+                    }
+                </li>
+            </ul>
+    </div>
+    
 </body>
-</html>
+
+
+
+
+
+
+
+-->
