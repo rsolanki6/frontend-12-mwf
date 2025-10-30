@@ -1,0 +1,9 @@
+body {
+    /* background-color: aqua;     */
+    width: 100%;
+    height: 678px;
+    background: -webkit-linear-gradient(from left,#a86632,#46e5e8,#3b342e);
+    background: -o-linear-gradient(from left,#a86632,#46e5e8,#3b342e);
+    background: -moz-linear-gradient(from left,#a86632,#46e5e8,#3b342e);
+    background: linear-gradient(to right,#a86632,#46e5e8,#3b342e);
+}
