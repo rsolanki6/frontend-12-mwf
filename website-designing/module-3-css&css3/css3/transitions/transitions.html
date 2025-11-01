@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+    <style>
+    .box, .box1, .box2, .box3 
+    {
+        width: 30%;
+        height: auto;
+        margin: auto;
+        margin-top: 5%;   
+    }
+    .box img, .box1 img, .box2 img, .box3 img
+    {
+        width: 100%;
+        height: auto;    
+        transition: 1s ease all;
+    }
+    .box img:hover 
+    {
+        transform: rotate(360deg);
+        filter: grayscale(100%);
+    }
+    .box1 img:hover 
+    {
+        transform: rotate(360deg);
+        filter:brightness(10%);
+    }
+    .box2 img:hover 
+    {
+        transform: rotate(360deg);
+        filter:blur(20px);
+    }
+    .box3 img:hover 
+    {
+        transform: rotate(360deg);
+        /* filter:contrast(20%); */
+        /* filter:opacity(0.1); */
+        filter:drop-shadow(5px 15px 10px  coral);
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://media.istockphoto.com/id/610442886/photo/young-woman-making-a-picture.jpg?s=170667a&w=0&k=20&c=VhLzzZ6ANitoC2cPM-Zq29r1GITNktqFxetPg2W42qQ=" alt="photo" title="my photo" />    
+    </div>
+
+    <div class="box1">
+        <img src="https://media.istockphoto.com/id/610442886/photo/young-woman-making-a-picture.jpg?s=170667a&w=0&k=20&c=VhLzzZ6ANitoC2cPM-Zq29r1GITNktqFxetPg2W42qQ=" alt="photo" title="my photo" />    
+    </div>
+
+    <div class="box2">
+        <img src="https://media.istockphoto.com/id/610442886/photo/young-woman-making-a-picture.jpg?s=170667a&w=0&k=20&c=VhLzzZ6ANitoC2cPM-Zq29r1GITNktqFxetPg2W42qQ=" alt="photo" title="my photo" />    
+    </div>
+
+    <div class="box3">
+        <img src="https://media.istockphoto.com/id/610442886/photo/young-woman-making-a-picture.jpg?s=170667a&w=0&k=20&c=VhLzzZ6ANitoC2cPM-Zq29r1GITNktqFxetPg2W42qQ=" alt="photo" title="my photo" />    
+    </div>
+</body>
+</html>
