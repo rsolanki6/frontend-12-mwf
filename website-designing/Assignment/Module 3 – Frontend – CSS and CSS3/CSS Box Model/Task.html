@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+
+/* Center the card on the page */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    /* Profile Card Container */
+    .profile-card {
+        width: 300px;
+        border: 2px solid #ccc;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: center;
+        box-sizing: border-box; /* border-box example */
+    }
+
+    /* Profile Picture */
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px auto;
+        border: 3px solid #007BFF;
+        border-radius: 50%;
+        overflow: hidden;
+        box-sizing: content-box; /* content-box example */
+    }
+
+    .profile-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Profile Info */
+    .profile-info .name {
+        margin: 10px 0 5px 0;
+        font-size: 1.5em;
+        color: #333;
+    }
+
+    .profile-info .bio {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    /* Follow Button */
+    .follow-btn {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007BFF;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    .follow-btn:hover {
+        background-color: #0056b3;
+    }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-picture">
+            <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" alt="" width="120">
+        </div>
+        <div class="profile-info">
+            <h2>John Doe</h2>
+            <p class="bio">Web developer | Tech Enthusiast | Blogger</p>
+            <button class="follow-btn">Follow</button>
+        </div>
+    </div>
+    
+</body>
+</html>
