@@ -353,7 +353,7 @@ body{
 }
 
 .clients{
-    width: 85%;
+    width: 90%;
     height: auto;
     text-align: center;
     background-color: var(--bg-lightgray);
@@ -362,7 +362,11 @@ body{
     padding: 5px;
 }
 
-.clients h1,p{
+.clients h1{
+    font-size: 30px;
+}
+
+.clients p{
     font-size: 20px;
 }
 
@@ -375,6 +379,8 @@ body{
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
+    font-size: 30px;
+    margin-top: 2%;
 }
 
 .icon-wrapper:hover{
@@ -421,4 +427,10 @@ body{
     padding: 25px;
     border: solid 1px white;
     margin-top: 5%;     
+}
+
+/* Media Query */
+
+@media query{
+    
 }

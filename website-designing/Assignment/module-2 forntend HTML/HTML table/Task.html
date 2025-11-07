@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif; 
+            margin: 40px; 
+        }
+
+        td{
+            width: 25px;
+            height: 25px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+      <h2 style="text-align:center;">Product Catalog</h2>
+
+     <table style="width: 100%; border-collapse: collapse; text-align: center;">
+        <thead style="background-color: navy; color: white;">
+            <tr>
+                <th style="border: 1px solid #ddd; padding: 10px;">Product Name</th>
+                <th style="border: 1px solid #ddd; padding: 10px;">Product Image</th>
+                <th style="border: 1px solid #ddd; padding: 10px;">Price</th>
+                <th style="border: 1px solid #ddd; padding: 10px;">Description</th>
+                <th style="border: 1px solid #ddd; padding: 10px;">Availability</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px;">Wireless Headphones</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">
+                    <img src="https://www.simplygaming.in/cdn/shop/files/HyperX_Cloud_Stinger_2_Wireless_Gaming_Headset_Black.webp?v=1734080327" alt="Wireless Headphones" width="100">
+                </td>
+                <td style="border: 1px solid #ddd; padding: 10px;">$59.99</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">Bluetooth over-ear headphones with noise cancellation.</td>
+                <td style="border: 1px solid #ddd; padding: 10px; color: red">Out of stock</td>
+            </tr>
+
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px;">Smart Watch</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">
+                    <img src="https://images-cdn.ubuy.co.in/653dca4638b3b6351c03b03e-smart-watch-for-android-and-iphone.jpg" alt="Smart Watch" width="100">
+                </td>
+                <td style="border: 1px solid #ddd; padding: 10px;">1500</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">Touchscreen smartwatch with heart rate monitor.</td>
+                <td style="border: 1px solid #ddd; padding: 10px; color: green;">In Stock</td>
+            </tr>
+
+            <!-- Example with rowspan -->
+            <tr>
+                <td rowspan="2" style="border: 1px solid #ddd; padding: 10px;">Laptop</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">
+                    <img src="https://doiqgxrhp4iii.cloudfront.net/15-DK0263TX_9_11zon.jpg" alt="Laptop" width="100">
+                </td>
+                <td style="border: 1px solid #ddd; padding: 10px;">₹75,000</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">High-performance laptop for work and gaming.</td>
+                <td style="border: 1px solid #ddd; padding: 10px; color: green;">In Stock</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="border: 1px solid #ddd; padding: 10px; text-align:left; background-color: #f1f1f1;">
+                    Accessories included: Charger, Carry Case, and Wireless Mouse.
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>
