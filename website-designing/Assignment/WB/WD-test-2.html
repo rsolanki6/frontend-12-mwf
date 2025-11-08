@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='WD-test-2.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div class="contact-section">
+        <h2>contact us</h2>
+
+        <div class="contact-info">
+            <div class="address">
+                <p><strong>address :</strong><br>
+                saint marco street, 6th floor, tokyo, japan, 123456.</p>
+                <span class="icon">+91 1234567890</span> <br>
+                <span class="icon">example@gmail.com</span>
+            </div>
+        </div>
+
+        <div class="form-map-container">
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="name :" required>
+                <input type="text" id="company" name="company" placeholder="company :">
+                <input type="email" id="email" name="email" placeholder="email :" required>
+                <input type="text" id="mobile" name="mobile" placeholder="mobile :" required>
+                <textarea id="message" name="message" placeholder="message :" required></textarea>
+                <button type="submit" class="send-btn">send</button>
+            </form>
+
+            <div class="map">
+                <!-- google map embedded -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.1179369753543!2d-0.1277582841328442!3d51.52189667963638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2a41a97db3%3A0xbbbdb05f71cb8ad9!2sMalet%20St%2C%20London%20WC1E%207HU%2C%20UK!5e0!3m2!1sen!2suk!4v1614872345678!5m2!1sen!2suk"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-github"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>

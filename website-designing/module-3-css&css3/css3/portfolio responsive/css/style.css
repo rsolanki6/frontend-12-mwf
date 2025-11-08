@@ -41,6 +41,10 @@ body{
     padding: 15px;
 }
 
+.leftsidebar-mobile{
+    display: none;
+}
+
 .navbar-links li{
     padding: 25px 5px;
     font-size: 25px;
@@ -431,6 +435,131 @@ body{
 
 /* Media Query */
 
-@media query{
-    
+@media only screen and (max-width: 768px) 
+{
+#main 
+{
+display: block !important;
+width: 100%;
+height: auto;
+margin: auto;
+
+}
+.leftsidebar
+{
+  width:90%;
+  height: auto;
+  position: relative;
+  margin-bottom: 5%;
+  display: none;
+}
+.leftsidebar-mobile {
+    display: block;
+    position: fixed;
+    width: 100%;
+    background-color: #212529;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  #menu-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* Hidden menu by default */
+  #mobile-menu {
+    display: none;
+    background: #343a40;
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  /* Active when toggled */
+  #mobile-menu.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  #mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0px;
+    border-bottom: 1px solid #495057;
+  }
+
+  #mobile-menu ul li a:hover {
+    background: #0d6efd;
+  }
+
+  /* Smooth fade animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.rightsidebar
+{
+  width: 90%;
+  height: auto;
+  margin-left: 0%;
+  margin-bottom: 5%;
+}
+.navbar-link li 
+{
+  padding: 15px 5px;
+  font-size: 20px;  
+}
+.navbar-link a 
+{
+  font-size: 20px;  
+}
+
+.banners
+{
+flex-direction: column;
+height: auto;
+margin-bottom: 5% !important;
+padding: 10px;
+
+}
+.banners-txt
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 10px 0px;
+text-align: center;
+}
+.banners-photo
+{
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+}
+.get-to-know-me
+{
+  grid-template-columns: auto;    
+}
+
 }
