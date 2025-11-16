@@ -478,33 +478,37 @@ body{
 
 /* Media Query */
 
-@media only screen and (max-width: 768px) 
-{
-    #main {
-        display: block !important;
-        width: 100%;
-        height: auto;
-        margin: auto;
+/* 📱 MOBILE VIEW (for screen width 768px and below) */
+@media only screen and (max-width: 768px) {
+
+    /* ----- GENERAL ----- */
+    body {
+        overflow-x: hidden;
     }
 
+    #main {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* ----- SIDEBARS ----- */
     .leftsidebar {
-        width:90%;
-        height: auto;
-        position: relative;
-        margin-bottom: 5%;
         display: none;
     }
 
     .leftsidebar-mobile {
         display: block;
         position: fixed;
-        width: 100%;
-        background-color: #212529;
         top: 0;
         left: 0;
-        z-index: 1000;
-        padding: 10px 20px;
+        width: 100%;
+        background-color: #212529;
         color: white;
+        padding: 12px 20px;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     #menu-btn {
@@ -515,17 +519,15 @@ body{
         cursor: pointer;
     }
 
-    /* Hidden menu by default */
-    
+    /* hidden menu by default */
     #mobile-menu {
         display: none;
         background: #343a40;
-        padding: 15px 0;
-        border-radius: 8px;
-        margin-top: 10px;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
     }
 
-    /* Active when toggled */
+    /* show menu when active */
     #mobile-menu.active {
         display: block;
         animation: fadeIn 0.4s ease-in-out;
@@ -533,15 +535,20 @@ body{
 
     #mobile-menu ul {
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
+    }
+
+    #mobile-menu ul li {
+        padding: 12px 0;
+        text-align: center;
     }
 
     #mobile-menu ul li a {
         color: white;
         text-decoration: none;
         display: block;
-        padding: 0px;
+        font-size: 18px;
         border-bottom: 1px solid #495057;
     }
 
@@ -549,57 +556,116 @@ body{
         background: #0d6efd;
     }
 
-    /* Smooth fade animation */
     @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ----- RIGHT SIDEBAR ----- */
     .rightsidebar {
-        width: 90%;
-        height: auto;
-        margin-left: 0%;
-        margin-bottom: 5%;
+        width: 100%;
+        margin-left: 0;
+        padding-top: 70px; /* space for fixed menu */
     }
 
-    .navbar-link li {
-        padding: 15px 5px;
-        font-size: 20px;  
-    }
-
-    .navbar-link a {
-        font-size: 20px;  
-    }
-
+    /* ----- BANNER SECTION ----- */
     .banners {
         flex-direction: column;
-        height: auto;
-        margin-bottom: 5% !important;
-        padding: 10px;
+        align-items: center;
+        text-align: center;
+        margin: 40px 0;
     }
 
     .banners-txt {
         width: 100%;
-        height: auto;
-        margin: auto;
-        padding: 10px 0px;
-        text-align: center;
+        padding: 10px;
+    }
+
+    .banners-txt h1 {
+        font-size: 40px;
+    }
+
+    .banners-txt h2 {
+        font-size: 28px;
+    }
+
+    .banners-txt h3 {
+        font-size: 20px;
+    }
+
+    .banners-txt #btn1,
+    .banners-txt #btn2 {
+        width: 90%;
+        font-size: 18px;
+        margin: 10px 0;
     }
 
     .banners-photo {
         width: 100%;
         text-align: center;
-        margin-top: 5%;
+        margin-top: 20px;
     }
 
+    .banners-photo img {
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    /* ----- GET TO KNOW ME ----- */
     .get-to-know-me {
-        grid-template-columns: auto;    
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
     }
 
+    .profile {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .know-me-txt {
+        width: 95%;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+        gap: 10px;
+    }
+
+    .detail-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* ----- STATS SECTION ----- */
+    .stats-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .clients {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* ----- SKILLS ----- */
+    .techonologies-use {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frontend, .backend {
+        width: 90%;
+        margin: 15px 0;
+    }
+
+    progress {
+        width: 100%;
+    }
+
+    /* ----- GENERAL TEXT SCALING ----- */
+    h1, h2, h3, h4, p, a, span {
+        font-size: 95%;
+    }
 }
