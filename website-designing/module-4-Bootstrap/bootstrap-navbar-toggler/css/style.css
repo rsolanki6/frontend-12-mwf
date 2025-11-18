@@ -1,0 +1,60 @@
+.app {
+     width: 40%;
+     height: auto;
+     margin: auto;   
+     border-radius: 8%;
+}
+
+.navbar {
+     width: 100%;
+     height: auto;
+}
+
+.navbar-link {
+     margin-left: 30%;
+}
+
+.navbar-link li {
+     display: inline-block;
+     padding: 20px 20px;
+}
+
+.navbar-link a {
+     text-decoration: none;
+     list-style-type: none;
+     color: white;
+}
+
+.dropdown:hover .dropdown-menu{
+     display: block;
+}
+
+::placeholder {
+     color: white !important;
+     font-size: 18px;
+}
+
+input[type="text"],input[type="password"],textarea {
+     border: none !important;    
+     border-bottom: 2px solid black !important;  
+     margin-top: 2% !important;
+}
+
+/* Media Query */
+
+@media only screen and (max-width:767px) {
+     .app {
+          width: 90% !important;
+          height: auto;
+          margin: auto;   
+          border-radius: 8%;
+     }
+
+     .navbar-link{
+          margin-left: 0%;
+     }
+     .navbar-link li {
+          display:block;
+          padding: 10px 5px;
+     }
+}
