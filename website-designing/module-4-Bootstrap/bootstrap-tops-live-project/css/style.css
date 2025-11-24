@@ -1,0 +1,89 @@
+:root 
+{
+     --brand: #2E3192;
+     --white: #ffffff;
+     --black: #1b1b1b;
+     --darkgray: #7a7a7a;
+     --gray: #c1c1c1;
+     --lightgray: #dadada;
+     --light: #f2f2f2;
+     --blue: #4C92BE;
+     --red: #EB5C5C;
+     --green: #54B669;
+     --yellow: #F9A825;
+     --orange: #FF7426;
+     --lightblue: #ECF5FB;
+}
+
+body{
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+     box-sizing: border-box;
+}
+
+/* Navbar */
+#tops-header{
+     width: 100%;
+     height: auto;
+     background: var(--blue);
+}
+
+.navbar-brand img{
+     width: 70% !important;
+     height: auto;
+}
+
+.navbar-link li{
+     display: inline-block;
+     padding: 2px 12px;
+     text-decoration: none;
+     list-style-type: none;
+     font-size: 10px;
+     /* margin-right: 5%; */
+}
+
+.navbar-link li a{
+     color: black;
+     font-size: 18px;
+     font-weight: 700;
+     text-decoration: none;
+     list-style-type: none;
+}
+
+/* slider */
+
+#tops-slider{
+     width: 100%;
+     height: 500px;
+     background: url(../images/home-banner.jpg) no-repeat;
+     background-position: center;
+}
+
+.tops-exelence{
+     width: 90%;
+     height: 30vh;
+     margin: auto;
+     border-radius: 10px;
+}
+
+.tops-exelence-img{
+     width: 400px;
+     height: 30vh;
+     border-radius: 10px 0px 0px 10px;
+     background-color: var(--blue) !important;
+     clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+}
+
+.tops-exelence-img img{
+     width: 45%;
+     margin-top: 2.5%;
+     margin-left: 10%;
+}
+
+.enquiry-txt {
+     width: 100%;
+     height: auto;  
+     background: linear-gradient(rgba(10,0,0,0.8),rgba(10,0,0,0.6)), url('https://halepharm.com/wp-content/uploads/2016/04/enquiry.jpg') no-repeat;
+     background-size: 100% 200px;  
+}
