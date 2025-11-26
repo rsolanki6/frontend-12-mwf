@@ -452,7 +452,7 @@ body{
     width: 98%;
     height: auto;
     padding: 15px;
-    border: solid 1px white;
+    /* border: solid 1px white; */
     margin-top: 5%;
     justify-content: center;
 }
@@ -464,17 +464,19 @@ body{
     font-family: "Ubuntu", sans-serif;;
 }
 
-.resume .resume-side {
-    padding: 2rem;
+.resume-side {
+    width: 90%;
+    height: 90%;
+    padding: 35px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    height: 100%;
+    background-color: var(--bg-lightgray);
 }
 
 .resume .resume-side h3 {
-    font-size: 1.5rem;
+    font-size: 31px;
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 700;
+    text-align: left;
 }
 
 .resume .resume-side .profile-img img {
@@ -483,13 +485,12 @@ body{
     object-fit: cover;
     border: 5px solid gray;
     border-radius: 12px;
+    margin-left: -18% !important;
 }
 
 .leftside{
     width: 100%;
-    height: 180vh;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(164, 160, 160, 0.1);
+    height: auto;
 }
 
 .leftside h3{
@@ -498,11 +499,16 @@ body{
 }
 
 .contact-info li{
-    margin-top: 10%;
+    margin-top: 5%;
     list-style-type: none;
-    margin-left: -20%;
-    font-size: 16px;
+    margin-left: -13%;
+    font-size: 17px;
     padding: 2px;
+}
+
+.skills-animation{
+    width: 100%;
+    display: inline-block;
 }
 
 .skill-item{
@@ -516,11 +522,83 @@ body{
 }
 
 .flex-container .leftside{
-    width: 30%;
+    width: 40%;
     margin-right: 5%;
     padding: 15px;
     /* border-right: 2px solid gray; */
 }
+
+.resume-section{
+    width: 100%
+}
+
+.resume-item .dot {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 2px solid #dcdcdc;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.resume-section h4{
+    font-size: 25px;
+}
+
+.resume-section h5{
+    font-size: 17px;
+    margin-top: -4%;
+}
+
+.resume-section {
+    position: relative;
+    margin-left: 20px;
+}
+
+.resume-item {
+    position: relative;
+    padding-left: 35px;  /* spacing between line and text */
+    margin-bottom: 45px;
+}
+
+.company{
+    margin-top: -3%;
+}
+
+.resume-item li{
+    margin-left: -5%;
+}
+
+.resume-item .dot {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border: 2px solid #dcdcdc;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.resume-item .line {
+    position: absolute;
+    left: 7px;  /* centers under circle */
+    top: 24px;
+    width: 2px;
+    height: calc(100% - 10px);
+    background: #555;     /* same grey as shown */
+    opacity: 0.6;
+}
+
+.resume-content{
+    width: 80%;
+    height: auto;
+    padding: 10px;
+ }
 
 /* Portfolio */
 .portfolio{
