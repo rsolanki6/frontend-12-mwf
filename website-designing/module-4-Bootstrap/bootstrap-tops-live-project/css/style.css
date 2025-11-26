@@ -27,11 +27,17 @@ body{
      width: 100%;
      height: auto;
      background: var(--blue);
+     z-index: 5;
 }
 
 .navbar-brand img{
      width: 70% !important;
      height: auto;
+}
+
+.navbar-link
+{
+     margin-left: 25%;  
 }
 
 .navbar-link li{
@@ -60,14 +66,14 @@ body{
      background-position: center;
 }
 
-.tops-exelence{
+.tops-exellence{
      width: 90%;
      height: 30vh;
      margin: auto;
      border-radius: 10px;
 }
 
-.tops-exelence-img{
+.tops-exellence-img{
      width: 400px;
      height: 30vh;
      border-radius: 10px 0px 0px 10px;
@@ -75,10 +81,85 @@ body{
      clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
 }
 
-.tops-exelence-img img{
-     width: 45%;
-     margin-top: 2.5%;
+.tops-exellence-img img{
+     width: 50%;
+     margin-top: 5%;
      margin-left: 10%;
+}
+
+.tops-exellence-img p{
+     color: white;
+     justify-content: right;
+}
+
+
+/* Rating Section */
+
+.star-set{
+     color: var(--yellow);
+}
+
+/* Job Assistance */
+.job-assistance
+{
+     width: 90%;
+     height: auto;
+     background: url('../images/placement-inner-bg.png') no-repeat;
+     background-size: cover;
+     background-position: center;
+     margin-left: 5%;    
+}
+
+
+/* Placement initiative */
+
+.nav li{
+     font-size: 20px;
+     margin-top: 1%;
+     border-radius: 15px;
+     gap: 2rem !important;
+}
+
+.tab-content{
+     color: var(--blue);
+}
+
+
+#pill-tab1{
+     border-radius: 10px;
+     color: white;
+     background-color: var(--blue);
+     border: none;
+     padding: 10px 20px;
+}
+
+#pill-tab2{
+     border-radius: 10px;
+     color: var(--blue);
+     border: 2px solid var(--blue);
+     padding: 10px 20px;
+}
+
+
+/* Job Fest */
+
+.form-banner{
+     width: 100%;
+     height: auto;
+     background: url(../images/jobfest-form-header.png);
+     padding: 20px 0px;
+     /* border-radius: 10px; */
+     /* margin-bottom: 20px; */
+}
+
+.form-inqform{
+     padding: 10px;
+     margin-top: 0;
+     background: linear-gradient(180deg, rgba(141, 188, 218, 0.2) 0%, rgba(85, 172, 238, 0.2) 50.86%, rgba(235, 246, 255, 0.2) 100%);
+}
+
+.form-inqform btn{
+     justify-content: center !important;
 }
 
 .enquiry-txt {
@@ -86,4 +167,81 @@ body{
      height: auto;  
      background: linear-gradient(rgba(10,0,0,0.8),rgba(10,0,0,0.6)), url('https://halepharm.com/wp-content/uploads/2016/04/enquiry.jpg') no-repeat;
      background-size: 100% 200px;  
+}
+
+
+@media only screen and (min-width:320px) and (max-width:786px)
+{
+     .navbar-brand img {
+          width: 60% !important;
+          height: auto;    
+          margin: 0 !important;
+     }
+
+     .navbar-link {
+          margin-left: 0%;    
+     }
+     
+     .navbar-link li {
+          display: block;
+          padding: 8px 0px;
+          margin-top: 1%;
+          text-decoration: none;
+          list-style-type: none;
+     }
+
+     #tops-slider {
+          width: 100%;
+          height: auto;
+          padding: 2%;
+          background: url('../images/home-banner.jpg') no-repeat;
+          background-size: 100% 550px;
+          background-position: center;    
+     }
+
+     .tops-excellence {
+          width: 94%;
+          margin: auto;
+          border-radius: 10px;
+          height: 18vh;    
+          display: grid !important;
+          grid-template-columns: auto auto auto;
+     }
+
+     .box1, .box2, .box3, .box4, .box5
+     {
+          width: 100%;
+          height: auto !important;    
+     }
+
+     .tops-excellence-img {
+          width: 80%;
+          height: 18vh;
+          border-radius: 10px 0px 0px 10px;    
+          background-color: var(--blue) !important;   
+          clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%); 
+     }
+
+     .tops-excellence-img img {
+          width: 42%;
+          height: auto;
+          margin-left: 25% !important;
+          margin-top: 1%;    
+     }
+
+     .modal-dialog {
+          margin-top: 10% !important;    
+     }
+
+     .job-assistance {
+          width: 100% !important;
+          height: auto !important;
+          background: url('../images/placement-inner-bg.png') no-repeat;
+          background-size: cover;
+          background-position: center;    
+     }
+
+     .whatsapp-app {
+     display:none;    
+     }
 }
