@@ -765,6 +765,7 @@ body{
     }
 
     #menu-btn {
+        display: block;
         background: transparent;
         color: white;
         border: none;
