@@ -1,0 +1,55 @@
+<!-- Calculate grade of student using marks -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function checkgrade(){
+               var n1 = document.getElementById("n1").value;
+
+               if(n1>= 90){
+                    document.getElementById("res").innerHTML = "Grade A+";
+               }
+               else if(n1>= 80){
+                    document.getElementById("res").innerHTML = "Grade A";
+               }
+               else if(n1>= 70){
+                    document.getElementById("res").innerHTML = "Grade B+";
+               }
+               else if(n1>= 60){
+                    document.getElementById("res").innerHTML = "Grade B";
+               }
+               else if(n1>= 50){
+                    document.getElementById("res").innerHTML = "Grade C+";
+               }
+               else if(n1>= 40){
+                    document.getElementById("res").innerHTML = "Grade C";
+               }
+               else if(n1>= 30){
+                    document.getElementById("res").innerHTML = "Grade D";
+               }
+               else{
+                    document.getElementById("res").innerHTML = "Grade F";
+               }
+          }
+
+     </script>
+
+</head>
+<body>
+
+     <center>
+          <h3>Calculate grade of student using marks</h3>
+          <form>
+               <input type="text" name="n1" id="n1"> <br><br>
+               <button type="button" onclick="checkgrade()">click me</button>
+          </form>
+          <p id="res"></p>
+     </center>
+     
+</body>
+</html>

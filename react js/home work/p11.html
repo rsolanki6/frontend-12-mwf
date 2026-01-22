@@ -1,0 +1,36 @@
+<!-- Check whether a number is palindrome -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function checkPalindrome() {
+               let num = document.getElementById("n1").value;
+
+               if (num === num.split('').reverse().join('')) {
+                    document.getElementById("res").innerHTML = num + " is a Palindrome";
+               } else {
+                    document.getElementById("res").innerHTML = num + " is NOT a Palindrome";
+               }
+          }
+
+     </script>
+     
+</head>
+<body>
+
+     <center>
+          <h3>Check whether a number is palindrome</h3>
+          <form>
+               <input type="text" name="n1" id="n1"> <br><br>
+               <button type="button" onclick="checkPalindrome()">click me</button>
+          </form>
+          <p id="res"></p>
+     </center>
+     
+</body>
+</html>

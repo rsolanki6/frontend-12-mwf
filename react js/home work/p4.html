@@ -1,0 +1,50 @@
+<!-- Find the largest of three numbers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function checknumber() {
+               var n1 = document.getElementById("n1").value;
+               var n2 = document.getElementById("n2").value;
+               var n3 = document.getElementById("n3").value;
+
+               if(n1 === '' || n2 === '' || n3 === ''){
+                    document.getElementById("res").innerHTML = "Please enter all three numbers";
+               }
+               else if(n1>n2 && n1>n3){
+                    document.getElementById("res").innerHTML = "The largest number is " + n1;
+               }
+               else if(n2>n1 && n2>n3){
+                    document.getElementById("res").innerHTML = "The largest number is " + n2;
+               }
+               else if(n3>n1 && n3>n2){
+                    document.getElementById("res").innerHTML = "The largest number is " + n3;
+               }
+               else{
+                    document.getElementById("res").innerHTML = "There number are equal";
+               }
+          }
+
+     </script>
+
+</head>
+<body>
+
+      <center>
+          <h3>Find the largest of three numbers</h3>
+          <form>
+               <input type="number" name="n1" id="n1" placeholder="Enter the first number"> <br> <br>    
+               <input type="number" name="n2" id="n2" placeholder="Enter the second number"> <br> <br>    
+               <input type="number" name="n3" id="n3" placeholder="Enter the third number"> <br> <br>    
+               <button type="button" onclick="checknumber()">Click me</button>
+          </form>
+          <p id="res"></p>
+     </center>
+     
+</body>
+</html>

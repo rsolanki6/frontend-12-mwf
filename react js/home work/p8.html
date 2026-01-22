@@ -1,0 +1,40 @@
+<!-- Check whether a character is a vowel or consonant -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function checkchar(){
+               var char = document.getElementById("char").value.toLowerCase();
+               var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+               if(vowels.includes(char)){
+                    document.getElementById("res").innerHTML = char + " is a VOWEL";
+               }
+               else{
+                    document.getElementById("res").innerHTML = char + " is a CONSONANT";
+               }
+          }
+
+     </script>
+
+
+</head>
+<body>
+
+
+     <center>
+          <h3>Check whether a character is a vowel or consonant</h3>
+          <form>
+               <input type="text" name="char" id="char" maxlength="1"> <br> <br>
+               <button type="button" onclick="checkchar()">click me</button>
+          </form>
+          <p id="res"></p>
+     </center>
+     
+</body>
+</html>

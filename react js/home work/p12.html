@@ -1,0 +1,41 @@
+<!-- Check whether a number is armstrong -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number Check</title>
+
+     <script>
+        function checkArmstrong() {
+            let num = document.getElementById("n1").value;
+            
+            // Convert to string to get digits
+            let digits = num.split('');
+            
+            // Only works for 3-digit numbers here
+            let sum = Math.pow(digits[0], 3) + Math.pow(digits[1], 3) + Math.pow(digits[2], 3);
+            
+            if (sum == num) {
+                document.getElementById("res").innerHTML = num + " is an Armstrong number";
+            } else {
+                document.getElementById("res").innerHTML = num + " is NOT an Armstrong number";
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+     <center>
+          <h3>Check whether a number is Armstrong</h3>
+          <form>
+               <input type="text" id="n1" placeholder="Enter a 3-digit number">
+               <br><br>
+               <button type="button" onclick="checkArmstrong()">Click Me</button>
+          </form>
+          <p id="res"></p>
+     </center>
+
+</body>
+</html>
