@@ -1,0 +1,41 @@
+<!-- Check whether a character is alphabet, digit, or special character -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function checkCharacter(){
+               var char = document.getElementById("char").value;
+
+               if(char>='A' && char<='Z'){
+                    document.getElementById("res").innerHTML = char + " is Uppercase Alphabet"
+               }
+               else if(char>='a' && char<='z'){
+                    document.getElementById("res").innerHTML = char + " is Lowercase Alphabet"
+               }
+               else if(char>='0' && char<='9'){
+                    document.getElementById("res").innerHTML = char + " is Digit"
+               }
+               else{
+                    document.getElementById("res").innerHTML = char + " is Special character"
+               }
+          }
+
+     </script>
+     
+</head>
+<body>
+
+     <center>
+          <h3>Check whether a character is alphabet, digit, or special character</h3>
+          <input type="text" id="char" placeholder="Enter a character"> <br><br>
+          <button type="button" onclick="checkCharacter()">Click me</button>
+          <p id="res"></p>
+     </center>
+     
+</body>
+</html>

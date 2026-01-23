@@ -1,0 +1,38 @@
+<!-- Check whether a string is empty or not -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Empty String</title>
+
+     <script>
+          function checkString() {
+               let str = document.getElementById("textInput").value;
+
+               if (str.trim() === "") {
+                    document.getElementById("result").innerText = "String is empty";
+               } else {
+                    document.getElementById("result").innerText = "String is not empty";
+               }
+          }
+     </script>
+
+
+</head>
+<body>
+
+     <center>
+
+          <h2>Check Empty String</h2>
+      
+          <input type="text" id="textInput" placeholder="Enter text">
+          <button onclick="checkString()">Check</button>
+      
+          <p id="result"></p>
+
+     </center>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- Check triangle type (equilateral, isosceles, scalene) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function triangletype(){
+               var a = Number(document.getElementById("side1").value);
+               var b = Number(document.getElementById("side2").value);
+               var c = Number(document.getElementById("side3").value);
+
+               if(a<=0 || b<=0 || c<=0){
+                    document.getElementById("res").innerHTML = "Please fill the fields";
+               }
+               else if(a === b && b === c){
+                    document.getElementById("res").innerHTML = "Equilateral Triangle"
+               }
+               else if(a === b || b === c || c === a){
+                    document.getElementById("res").innerHTML = "Isoscales Triangle"
+               }
+               else if(a !== b && b !== c && c !== a){
+                    document.getElementById("res").innerHTML = "Scalene Triangle"
+               }
+               else{
+                    document.getElementById("res").innerHTML = "Enter valid values";
+               }
+               
+
+          }
+
+     </script>
+
+</head>
+<body>
+
+     <center>
+
+          <h2>Check triangle type (equilateral, isosceles, scalene)</h2>
+
+          <input type="text" id="side1" placeholder="Enter side1"> <br><br>
+          <input type="text" id="side2" placeholder="Enter side2"> <br><br>
+          <input type="text" id="side3" placeholder="Enter side3"> <br><br>
+
+          <button type="button" onclick="triangletype()">Click me</button>
+          <p id="res"></p>
+
+     </center>
+     
+</body>
+</html>

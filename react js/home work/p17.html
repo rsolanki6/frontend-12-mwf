@@ -1,0 +1,41 @@
+<!-- Check whether a number is multiple of 3 or 7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function checkNumber(){
+               var n1 = document.getElementById("n1").value;
+
+               if(n1%3 == 0 || n1%7 == 0){
+                    document.getElementById("res").innerHTML = n1 + " is multiples by both 3 and 7";
+               }
+               else if(n1%3 == 0){
+                    document.getElementById("res").innerHTML = n1 + " is number is only multiple of 3";
+               }
+               else if(n1%7 == 0){
+                    document.getElementById("res").innerHTML = n1 + " is number is only multiple of 7";
+               }
+               else{
+                    document.getElementById("res").innerHTML = "Enter valid number";
+               }
+          }
+
+     </script>
+
+</head>
+<body>
+
+     <center>
+          <h2>Check whether a number is multiple of 3 or 7</h2>
+          <input type="number" id="n1" placeholder="Enter a number"> <br><br>
+          <button type="button" onclick="checkNumber()">Click me</button>
+          <p id="res"></p>
+     </center>
+     
+</body>
+</html>

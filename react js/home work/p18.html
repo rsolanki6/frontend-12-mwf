@@ -1,0 +1,36 @@
+<!-- Find absolute value of a number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function findAbsolute(){
+               var n1 = document.getElementById("n1").value;
+
+
+               if(n1 < 0){
+                    document.getElementById("res").innerHTML = "Absolute value of " + n1 + " is " + (-n1);
+               }
+               else{
+                    document.getElementById("res").innerHTML = "Absolute value of " + n1 + " is " + n1;
+               }
+          }
+     </script>
+
+</head>
+<body>
+
+     <center>
+          <h2>Find absolute value of a number</h2>
+
+          <input type="number" id="n1" placeholder="Enter number"> <br><br>
+          <button type="button" onclick="findAbsolute()">Click me</button>
+          <p id="res"></p>
+     </center>
+     
+</body>
+</html>
