@@ -1,0 +1,39 @@
+<!-- Count even and odd digits -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function countEvenOdd() {
+               var number = document.getElementById("numberInput").value;
+               var evenCount = 0;
+               var oddCount = 0;
+
+               for (var i = 0; i < number.length; i++) {
+                    var digit = parseInt(number.charAt(i));
+                    if (digit % 2 === 0) {
+                         evenCount++;
+                    } else {
+                         oddCount++;
+                    }
+               }
+
+               document.getElementById("outputCount").innerHTML = "Even digits: " + evenCount + "<br>Odd digits: " + oddCount;
+          }
+     </script>
+</head>
+<body>
+
+     <center>
+          <h3>Count even and odd digits in a number</h3>
+          <input type="number" id="numberInput" placeholder="Enter a number"> <br><br>
+          <button type="button" onclick="countEvenOdd()">Submit</button>
+          <br><br>
+          <div id="outputCount"></div>
+     </center>
+
+     
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- Count digits in a number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function countDigits() {
+               var n = document.getElementById("n3").value;
+               var count = 0;
+               while (n != 0) {
+                    n = Math.floor(n / 10);
+                    count++;
+               }
+               document.getElementById("output3").innerHTML = "Number of digits: " + count;
+          }
+
+     </script>
+
+</head>
+<body>
+     <center>
+          <h3>Count digits in a number</h3>
+          <input type="number" id="n3" placeholder="Enter a number"> <br><br>
+          <button type="button" onclick="countDigits()">Submit</button>
+          <br><br>
+          <div id="output3"></div>
+     </center>
+
+</body>
+</html>

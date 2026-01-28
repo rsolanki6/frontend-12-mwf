@@ -1,0 +1,39 @@
+<!-- Find LCM of two numbers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function findLCM() {
+               var a = parseInt(document.getElementById("num1").value);
+               var b = parseInt(document.getElementById("num2").value);
+               var max = (a > b) ? a : b;
+               var lcm = max;
+
+               while (true) {
+                    if (lcm % a == 0 && lcm % b == 0) {
+                         break;
+                    }
+                    lcm++;
+               }
+
+               document.getElementById("outputLCM").innerHTML = "LCM of " + a + " and " + b + " is: " + lcm;
+          }
+     </script>
+</head>
+<body>
+
+     <center>
+          <h3>Find LCM of two numbers</h3>
+          <input type="number" id="num1" placeholder="Enter first number"> <br><br>
+          <input type="number" id="num2" placeholder="Enter second number"> <br><br>
+          <button type="button" onclick="findLCM()">Submit</button>
+          <br><br>
+          <div id="outputLCM"></div>
+     </center>
+
+     
+</body>
+</html>

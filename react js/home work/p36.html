@@ -1,0 +1,29 @@
+<!-- Print ASCII values -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function printASCII() {
+               var result = "";
+               for (var i = 65; i <= 90; i++) {
+                    result += String.fromCharCode(i) + " : " + i + "<br>";
+               }
+               document.getElementById("outputASCII").innerHTML = result;
+          }
+     </script>
+</head>
+<body>
+
+     <center>
+          <h3>Print ASCII values of characters from A to Z</h3>
+          <button type="button" onclick="printASCII()">Submit</button>
+          <br><br>
+          <div id="outputASCII"></div>
+     </center>
+
+     
+</body>
+</html>

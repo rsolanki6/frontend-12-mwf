@@ -1,0 +1,33 @@
+<!-- Find sum of digits of a number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+
+          function sumOfDigits() {
+               var n = document.getElementById("n5").value;
+               var sum = 0;
+               while (n != 0) {
+                    sum += n % 10;
+                    n = Math.floor(n / 10);
+               }
+               document.getElementById("output5").innerHTML = "Sum of digits: " + sum;
+          }
+
+     </script>
+</head>
+<body>
+     
+     <center>
+          <h3>Find sum of digits of a number</h3>
+          <input type="number" id="n5" placeholder="Enter a number"> <br><br>
+          <button type="button" onclick="sumOfDigits()">Submit</button>
+          <br><br>
+          <div id="output5"></div>
+     </center>
+
+</body>
+</html>

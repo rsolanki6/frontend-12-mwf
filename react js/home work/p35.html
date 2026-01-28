@@ -1,0 +1,37 @@
+<!-- Find HCF / GCD -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function findHCF() {
+               var a = parseInt(document.getElementById("numA").value);
+               var b = parseInt(document.getElementById("numB").value);
+               var hcf = 1;
+
+               for (var i = 1; i <= Math.min(a, b); i++) {
+                    if (a % i == 0 && b % i == 0) {
+                         hcf = i;
+                    }
+               }
+
+               document.getElementById("outputHCF").innerHTML = "HCF/GCD of " + a + " and " + b + " is: " + hcf;
+          }
+     </script>
+</head>
+<body>
+
+
+     <center>
+          <h3>Find HCF / GCD of two numbers</h3>
+          <input type="number" id="numA" placeholder="Enter first number"> <br><br>
+          <input type="number" id="numB" placeholder="Enter second number"> <br><br>
+          <button type="button" onclick="findHCF()">Submit</button>
+          <br><br>
+          <div id="outputHCF"></div>
+     </center>
+     
+</body>
+</html>

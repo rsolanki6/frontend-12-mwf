@@ -1,0 +1,32 @@
+<!-- Print sum of first N natural numbers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+          function printNumbers() {
+               var n = parseInt(document.getElementById("n1").value);
+               var sum = 0;
+               for (var i = 1; i <= n; i++) {
+                    sum += i;
+               }
+               document.getElementById("output").innerHTML = "Sum of first " + n + " natural numbers is: " + sum;
+          }
+     </script>
+
+</head>
+<body>
+
+     <center>
+          <h3>Print sum of first N natural numbers</h3>
+          <input type="number" id="n1" placeholder="Enter a number"> <br><br>
+          <button type="button" onclick="printNumbers()">Submit</button>
+          <br><br>
+          <div id="output"></div>
+     </center>
+     
+</body>
+</html>

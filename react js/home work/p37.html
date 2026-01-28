@@ -1,0 +1,31 @@
+<!-- Print power of a number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function printPower() {
+               var base = parseInt(document.getElementById("base").value);
+               var exponent = parseInt(document.getElementById("exponent").value);
+               var result = Math.pow(base, exponent);
+               document.getElementById("outputPower").innerHTML = base + " raised to the power of " + exponent + " is: " + result;
+          }
+     </script>
+</head>
+<body>
+
+
+     <center>
+          <h3>Print power of a number</h3>
+          <input type="number" id="base" placeholder="Enter base"> <br><br>
+          <input type="number" id="exponent" placeholder="Enter exponent"> <br><br>
+          <button type="button" onclick="printPower()">Submit</button>
+          <br><br>
+          <div id="outputPower"></div>
+     </center>
+
+
+</body>
+</html>

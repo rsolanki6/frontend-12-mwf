@@ -1,0 +1,37 @@
+<!-- Print Fibonacci series -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function printFibonacci() {
+               var n = parseInt(document.getElementById("n2").value);
+               var a = 0, b = 1, nextTerm;
+               var result = "Fibonacci Series: ";
+
+               for (var i = 1; i <= n; i++) {
+                    result += a + "  ";
+                    nextTerm = a + b;
+                    a = b;
+                    b = nextTerm;
+               }
+
+               document.getElementById("output2").innerHTML = result;
+          }
+     </script>
+</head>
+<body>
+
+     <center>
+          <h3>Print Fibonacci series</h3>
+          <input type="number" id="n2" placeholder="Enter a number"> <br><br>
+          <button type="button" onclick="printFibonacci()">Submit</button>
+          <br><br>
+          <div id="output2"></div>
+
+     </center>
+     
+</body>
+</html>

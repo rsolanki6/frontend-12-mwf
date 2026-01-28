@@ -1,0 +1,32 @@
+<!-- Print factorial of a number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function printFactorial() {
+               var n = parseInt(document.getElementById("n1").value);
+               var factorial = 1;
+
+               for (var i = 1; i <= n; i++) {
+                    factorial *= i;
+               }
+
+               document.getElementById("output").innerHTML = "Factorial of " + n + " is " + factorial;
+          }
+     </script>
+</head>
+<body>
+     <center>
+          <h3>Print factorial of a number</h3>
+          <input type="number" id="n1" placeholder="Enter a number"> <br><br>
+          <button type="button" onclick="printFactorial()">Submit</button>
+          <br><br>
+          <div id="output"></div>
+     </center>
+
+     
+</body>
+</html>

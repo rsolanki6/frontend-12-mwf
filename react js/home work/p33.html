@@ -1,0 +1,41 @@
+<!-- Print all prime numbers between 1 to N -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+          function printPrimes() {
+               var n = document.getElementById("n7").value;
+               var primes = [];
+               for (var i = 2; i <= n; i++) {
+                    var isPrime = true;
+                    for (var j = 2; j <= Math.sqrt(i); j++) {
+                         if (i % j == 0) {
+                              isPrime = false;
+                              break;
+                         }
+                    }
+                    if (isPrime) {
+                         primes.push(i);
+                    }
+               }
+               document.getElementById("output7").innerHTML = "Prime numbers between 1 and " + n + ": " + primes.join(", ");
+          }
+     </script>
+
+</head>
+<body>
+
+     <center>
+          <h3>Print all prime numbers between 1 to N</h3>
+          <input type="number" id="n7" placeholder="Enter a number"> <br><br>
+          <button type="button" onclick="printPrimes()">Submit</button>
+          <br><br>
+          <div id="output7"></div>
+     </center>
+
+</body>
+</html>
