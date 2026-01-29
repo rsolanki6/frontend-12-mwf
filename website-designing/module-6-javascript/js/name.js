@@ -1,1 +1,0 @@
-document.write("Hi i am twinkle" + "<br>" + "i am nidhi" + "<br>" + "i am Hetvi makasana" + "<br>" + "Princy patel" + "<br>" + "i am manthan tanna")

@@ -7,21 +7,20 @@
      <meta name='viewport' content='width=device-width, initial-scale=1'>
      <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
      <script src='main.js'></script>
+</head>
+<body>
+
+     <p id="demo">Rohan</p>
+     <button type="button" id="btn">Click me</button>
 
      <script>
-
-          function display() {
-               document.getElementById("demo").style="text-align:center; font-size:85px; transition:2s ease all; text-shadow:2px 2px 4px red;";
-          }
-
-
+          var btn = document.getElementById("btn");
+          btn.addEventListener("click",
+               function(){
+                    document.getElementById("demo").style="color:red; font-size:30px";
+               }
+          )
      </script>
-
-</head>
-<body onload="display()">
      
-     <h1 id="demo">Rohan solanki</h1>
-
-
 </body>
 </html>
