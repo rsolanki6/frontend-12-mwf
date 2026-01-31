@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          .ap {
+               width: 30%;
+               height: auto;
+               margin: auto;
+               margin-top: 3%;
+          }
+          
+          .ap input,textarea{
+               width: 220px;
+               height: auto;
+               padding: 5px;    
+          }
+          
+          .ap input[type="submit"]{
+               width: 220px;
+               height: auto;
+               padding: 8px;
+               background-color: red;
+               color: white;
+               border: 0;
+          }
+
+     </style>
+
+</head>
+<body>
+
+     <div class="ap">
+          <h1>Form validation</h1>
+          <form action="welcome.html" name="frm" id="frm">
+               <input type="text" name="name" placeholder="Enter name"> <br><br>
+               <input type="text" name="email" placeholder="Enter email"> <br><br>
+               <input type="text" name="phone" placeholder="Enter phone"> <br><br>
+               <textarea name="address" placeholder="Enter address"></textarea> <br><br>
+               <input type="submit" value="submit">
+          </form>
+     </div>
+
+     <!-- external javascript called  -->
+     <script src="js/main.js"></script>
+     
+</body>
+</html>
