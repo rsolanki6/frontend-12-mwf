@@ -1,0 +1,36 @@
+<!-- Add, subtract, multiply, and divide two numbers using arithmetic operators -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operators</title>
+
+    <script>
+        function calculate() {
+            let num1 = Number(document.getElementById("number1").value);
+            let num2 = Number(document.getElementById("number2").value);
+
+            let result =
+                "Addition: " + (num1 + num2) + "<br>" +
+                "Subtraction: " + (num1 - num2) + "<br>" +
+                "Multiplication: " + (num1 * num2) + "<br>" +
+                "Division: " + (num1 / num2);
+
+            document.getElementById("res").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+
+     <center> 
+          <h3>Arithmetic Operations</h3>
+          <input type="number" id="number1" placeholder="Enter first number"> <br><br>
+          <input type="number" id="number2" placeholder="Enter second number"> <br><br>
+          <button onclick="calculate()">Calculate</button>
+      
+          <p id="res"></p>
+     </center>
+
+</body>
+</html>

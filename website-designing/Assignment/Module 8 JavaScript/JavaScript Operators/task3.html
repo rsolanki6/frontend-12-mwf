@@ -1,0 +1,44 @@
+<!-- Use logical operators to check if both conditions (e.g., a > 10 and b < 5)are true.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+
+    <script>
+        function calculate() {
+            let num1 = Number(document.getElementById("number1").value);
+            let num2 = Number(document.getElementById("number2").value);
+
+            let result = "";
+
+            // Logical AND (&&) condition
+            if (num1 > 10 && num2 < 5) {
+                result = "Condition is TRUE: num1 > 10 AND num2 < 5";
+            } else {
+                result = "Condition is FALSE: num1 > 10 AND num2 < 5";
+            }
+
+            document.getElementById("res").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+
+    <center>
+        <h3>Logical Operators</h3>
+
+        <input type="number" id="number1" placeholder="number greater than 10">
+        <br><br>
+
+        <input type="number" id="number2" placeholder="number less than 5">
+        <br><br>
+
+        <button onclick="calculate()">Check</button>
+
+        <p id="res"></p>
+    </center>
+
+</body>
+</html>

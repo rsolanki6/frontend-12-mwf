@@ -1,0 +1,54 @@
+<!-- Use comparison operators to check if two numbers are equal and if one number is greater
+than the other -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operators</title>
+
+    <script>
+        function calculate() {
+            let num1 = Number(document.getElementById("number1").value);
+            let num2 = Number(document.getElementById("number2").value);
+
+            let result = "";
+
+            // Check equality
+            if (num1 === num2) {
+                result += "Both numbers are equal.<br>";
+            } else {
+                result += "The numbers are not equal.<br>";
+            }
+
+            // Check which number is greater
+            if (num1 > num2) {
+                result += "First number is greater than second number.";
+            } else if (num1 < num2) {
+                result += "Second number is greater than first number.";
+            } else {
+                result += "Both numbers are the same.";
+            }
+
+            document.getElementById("res").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+
+    <center> 
+        <h3>Comparison Operators</h3>
+
+        <input type="number" id="number1" placeholder="Enter first number"> 
+        <br><br>
+
+        <input type="number" id="number2" placeholder="Enter second number"> 
+        <br><br>
+
+        <button onclick="calculate()">Check</button>
+
+        <p id="res"></p>
+    </center>
+
+</body>
+</html>

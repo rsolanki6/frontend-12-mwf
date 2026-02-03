@@ -1,0 +1,39 @@
+<!-- Write a JavaScript program to check if a number is positive, negative, or zero usingan if-else statement. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+
+          function checkNumber() {
+               var num = parseFloat(document.getElementById("num1").value);
+               var result;
+
+               if (num > 0) {
+                    result = "The number is positive.";
+               } else if (num < 0) {
+                    result = "The number is negative.";
+               } else {
+                    result = "The number is zero.";
+               }
+
+               document.getElementById("res").innerText = result;
+          }
+
+     </script>
+
+</head>
+<body>
+
+     <center>
+          <h2>Check Number is positive, negative, or zero</h2>
+          <input type="number" id="num1" placeholder="Enter a number"> <br><br>
+          <button onclick="checkNumber()">Check</button>
+          <p id="res"></p>
+     </center>
+     
+</body>
+</html>
