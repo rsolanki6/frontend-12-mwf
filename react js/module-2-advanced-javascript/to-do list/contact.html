@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Dark Theme</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white flex">
+
+     <!-- Sidebar -->
+     <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-slate-800 shadow-2xl transform -translate-x-full transition-transform duration-300 z-50">
+          <div class="flex justify-between items-center p-4 border-b border-slate-700">
+               <h2 class="text-xl font-bold text-indigo-400">Menu</h2>
+               <button id="closeSidebar" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+          </div>
+          
+          <nav class="flex flex-col p-4 space-y-4">
+               <a href="index.html" class="hover:bg-slate-700 rounded px-3 py-2 transition">Home</a>
+               <a href="addtask.html" class="hover:bg-slate-700 rounded px-3 py-2 transition">Add Task</a>
+               <a href="managetask.html" class="hover:bg-slate-700 rounded px-3 py-2 transition">Manage Task</a>
+               <a href="contact.html" class="hover:bg-slate-700 rounded px-3 py-2 transition">Contact Us</a>
+          </nav>
+     </div>
+
+     <!-- Main content -->
+     <div class="flex-1 min-h-screen flex flex-col">
+
+          <!-- Navbar -->
+          <header class="backdrop-blur-md bg-white/10 border-b border-white/20 shadow-lg p-4 flex items-center">
+               <button id="openSidebar" class="text-white text-2xl mr-4 hover:text-indigo-400 transition">&#9776;</button>
+               <h1 class="text-2xl font-bold text-indigo-400 tracking-wide"><a href="index.html">My Website</a></h1>
+          </header>
+
+          <!-- Page Sections -->
+          <main class="p-6 space-y-6">
+
+               <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                    <!-- Office Info & Map -->
+                    <div class="space-y-6">
+                         <!-- Office Address -->
+                         <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white/20">
+                              <h2 class="text-xl font-bold mb-4 text-indigo-400">Our Office</h2>
+                              <p class="text-gray-200">1234 Main Street,<br>Suite 500,<br>Cityville, ST 12345</p>
+                              <p class="mt-2 text-gray-200"><strong>Phone:</strong> (123) 456-7890</p>
+                              <p class="mt-1 text-gray-200"><strong>Email:</strong> contact@company.com</p>
+                         </div>
+
+                         <!-- Google Map -->
+                         <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                              <iframe
+                                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019049882861!2d-122.40140708468087!3d37.79361667975681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064c6a8c7a1%3A0x4e33f9d2c0f3f8e7!2sSalesforce%20Tower!5e0!3m2!1sen!2sus!4v1675938474000!5m2!1sen!2sus"
+                                   width="100%" height="300" class="border-0" allowfullscreen="" loading="lazy"></iframe>
+                         </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white/20">
+                         <h2 class="text-xl font-bold mb-4 text-indigo-400">Contact Us</h2>
+                         <form class="space-y-4">
+                              <div>
+                                   <label for="name" class="block text-white font-medium mb-1">Name</label>
+                                   <input type="text" id="name" name="name" placeholder="Your Name"
+                                        class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
+                              </div>
+
+                              <div>
+                                   <label for="email" class="block text-white font-medium mb-1">Email</label>
+                                   <input type="email" id="email" name="email" placeholder="Your Email"
+                                        class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
+                              </div>
+
+                              <div>
+                                   <label for="message" class="block text-white font-medium mb-1">Message</label>
+                                   <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                             class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                              </div>
+
+                              <button type="submit"
+                                   class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-semibold shadow-lg transition duration-300">
+                                   Send Message
+                              </button>
+                         </form>
+
+                         <!-- Social Media Links -->
+                         <div class="mt-6 flex space-x-4 text-gray-300">
+                              <a href="#" class="hover:text-indigo-400"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">...</svg></a>
+                              <a href="#" class="hover:text-indigo-400"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">...</svg></a>
+                              <a href="#" class="hover:text-indigo-400"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">...</svg></a>
+                              <a href="#" class="hover:text-indigo-400"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">...</svg></a>
+                         </div>
+                    </div>
+
+               </section>
+
+          </main>
+
+     </div>
+     <script src="js/main.js"></script>
+</body>
+</html>

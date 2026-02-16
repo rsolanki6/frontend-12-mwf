@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Sidebar with Tailwind CSS 4</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white flex">
+
+      <!-- Sidebar -->
+     <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-slate-800 shadow-2xl transform -translate-x-full transition-transform duration-300 z-50">
+          <div class="flex justify-between items-center p-4 border-b border-slate-700">
+               <h2 class="text-xl font-bold text-indigo-400">Menu</h2>
+               <button id="closeSidebar" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+          </div>
+          
+          <nav class="flex flex-col p-4 space-y-4">
+               <a href="index.html" class="hover:bg-slate-700 rounded px-3 py-2 transition">Home</a>
+               <a href="addtask.html" class="hover:bg-slate-700 rounded px-3 py-2 transition">Add Task</a>
+               <a href="managetask.html" class="hover:bg-slate-700 rounded px-3 py-2 transition">Manage Task</a>
+               <a href="contact.html" class="hover:bg-slate-700 rounded px-3 py-2 transition">Contact Us</a>
+          </nav>
+     </div>
+
+     <!-- Main content -->
+     <div class="flex-1 min-h-screen flex flex-col">
+          <!-- Navbar -->
+          <header class="backdrop-blur-md bg-white/10 border-b border-white/20 shadow-lg p-4 flex items-center">
+               <button id="openSidebar" class="text-white text-2xl mr-4 hover:text-indigo-400 transition">&#9776;</button>
+               <h1 class="text-2xl font-bold text-indigo-400 tracking-wide"><a href="index.html"> My Website </a></h1>
+          </header>
+
+
+          <!-- Page Sections -->
+          <main class="p-6 space-y-6">
+               <section class="bg-gradient-to-br border border-white p-6 rounded-xl shadow max-w-4xl mx-auto">
+                    <h2 class="text-xl font-bold mb-4">Manage Tasks</h2>
+                    <div class="overflow-x-auto">
+                         <table class="min-w-full border border-gray-200">
+                         <thead class="bg-gradient-to-br">
+                              <tr>
+                              <th class="text-left px-4 py-2 border-b">Title</th>
+                              <th class="text-left px-4 py-2 border-b">Description</th>
+                              <th class="text-left px-4 py-2 border-b">Priority</th>
+                              <th class="text-left px-4 py-2 border-b">Due Date</th>
+                              <th class="text-left px-4 py-2 border-b">Actions</th>
+                              </tr>
+                         </thead>
+                         <tbody id="taskTableBody">
+                              <!-- Tasks will appear here dynamically -->
+                         </tbody>
+                         </table>
+                    </div>
+               </section>
+          </main>
+
+     </div>
+     <script src="js/main.js"></script>
+</body>
+</html>

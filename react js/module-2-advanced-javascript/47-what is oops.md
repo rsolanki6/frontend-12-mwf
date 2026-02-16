@@ -309,3 +309,42 @@ var obj=new B(15,10 );
 console.log(obj);
 </script>
 ```
+
+## Abstraction :
+
+**Abstraction**
+An abstraction is a data hiding process where our data will be hide from some enternal users.
+
+we never create an object od abstract class
+
+```
+<script>
+abstract class A 
+{
+    constructor(a,b)
+    {
+       this.a=a;
+       this.b=b;
+       
+    }
+}    
+class B extends A 
+{
+    constructor(a,b)
+    {
+       super(a,b)
+    }
+}
+
+var obj=new B(15,10 );
+console.log(obj);
+</script>
+```
+
+## Encapsulation 
+
+An encapsulation is a process where an object is wrapping up one data there we used encapsulation.
+
+OR
+
+An encapsulation is a process where all method wrapping up in one objects there we used encapsulation.

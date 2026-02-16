@@ -1,0 +1,18 @@
+<script>
+
+function getMessage() {
+     return new Promise((resolve) => {
+          setTimeout(() => {
+             resolve("Hii my name is Rohan");  
+          }, 2000);
+     })
+}
+
+async function showMessage() {
+     let message = await getMessage();
+     console.log(message)
+}
+
+showMessage();
+
+</script>
