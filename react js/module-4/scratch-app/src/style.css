@@ -1,0 +1,25 @@
+body
+{
+     margin: 0;
+     padding: 0;
+     background-color: blue;
+}
+
+.app
+{
+     width: 30%;
+     height: auto;
+     margin: auto;
+     padding: 2px;
+     margin-top: 5%;
+     background-color: black;
+     color: white;
+     border-radius: 25px;
+}
+
+.app h1{
+     text-align: center;
+     padding: 2px;
+     font-size: 20px;
+     font-weight: 200;
+}
