@@ -1,6 +1,6 @@
 import React from "react";
 import Data from "./Data";
-function EmployeeData(props) 
+function EmployeeData() 
 {
      return(
           <>
