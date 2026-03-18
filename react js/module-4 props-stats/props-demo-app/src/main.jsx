@@ -4,7 +4,8 @@ import './index.css'
 // import App from './App.jsx'
 // import EmployeeApp from './EmployeeApp.jsx'
 // import IconApp from './IconApp.jsx'
-import OfficeApp from './officeApp.jsx'
+// import OfficeApp from './officeApp.jsx'
+import Destructuring from './Desturcturing'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,7 +16,9 @@ createRoot(document.getElementById('root')).render(
 
     {/* <IconApp name="John" id="111" department="Engineering" salary={50000} /> */}
 
-    <OfficeApp name="John" id="111" Address="150 feet ring road" salary={50000}  />
+    {/* <OfficeApp name="John" id="111" Address="150 feet ring road" salary={50000}  /> */}
+
+    <Destructuring name="John doe" email="john@gmail.com" contact_no="1487529036" address="150 feet ring road" edu="Bachelor of Engineering" />
 
   </StrictMode>,
 )

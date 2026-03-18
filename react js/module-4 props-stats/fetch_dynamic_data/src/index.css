@@ -1,0 +1,31 @@
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
+.app
+{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  border-right: 2px solid gray;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.emp-grid
+{
+  width: 31%;
+  height: auto;
+  border: 2px solid gray;
+  margin: 10px;
+  text-align: center;
+}
+
+.emp-grid img{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
