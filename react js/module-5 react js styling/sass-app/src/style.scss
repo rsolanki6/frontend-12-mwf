@@ -1,0 +1,24 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+body{
+     margin: 0;
+     padding: 0;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.emp-app
+{
+     @include center;
+     height: 70vh;
+     background-color: $primary-color;
+     padding: $padding;
+}
+
+.box{
+     width: 30%;
+     height: 10vh;
+     padding: $padding;
+     margin: $margin;
+     background-color: $success-color;
+}
