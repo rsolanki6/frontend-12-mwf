@@ -18,7 +18,7 @@ export default function ButtonApp() {
           <Button variant="outlined">Click me</Button>
           
           </Stack>
-          <BadgeApp />
+            <BadgeApp />
           <CircularProgressWithLabel />
           <ActionAlerts />
           <BasicRating />
