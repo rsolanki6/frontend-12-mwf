@@ -1,122 +1,103 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useRef } from 'react'
+import Swal from 'sweetalert2';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+
+  const fullname = useRef("");
+  const email = useRef("");
+  const phone = useRef("");
+  const date = useRef("");
+  const doctor = useRef("");
+  const problem = useRef("");
+
+  const addData = (e) => {
+    e.preventDefault();
+
+    var insertData = {
+      fullname: fullname.current.value,
+      email: email.current.value,
+      phone: phone.current.value,
+      date: date.current.value,
+      doctor: doctor.current.value,
+      problem: problem.current.value
+    }
+
+    // Swal.fire({
+    //   title: "Appointment Booked!",
+    //   text: "Your appointment submitted successfully",
+    //   icon: "success"
+    // });
+
+      toast.success("Thanks for appointment successfully booked !", {
+         position: "top-right"
+      });
+
+      console.log(insertData);
+      // reset form data after submitted form 
+      e.target.reset();
+
+
+  }
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    
+    <ToastContainer />
+    <div className="container">
 
-      <div className="ticks"></div>
+      <div className="left">
+        <h1>Book Your Appointment</h1>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <p>
+          Schedule your appointment quickly and easily with our expert doctors.
+        </p>
+      </div>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <div className="right">
+
+        <h2>Appointment Form</h2>
+
+        <form onSubmit={addData}>
+
+          <div className="input-box">
+            <input type="text" placeholder="Full Name" required ref={fullname}/>
+          </div>
+
+          <div className="input-box">
+            <input type="email" placeholder="Email Address" required ref={email}/>
+          </div>
+
+          <div className="input-box">
+            <input type="tel" placeholder="Phone Number" required ref={phone}/>
+          </div>
+
+          <div className="input-box">
+            <input type="date" required ref={date}/>
+          </div>
+
+          <div className="input-box">
+            <select required ref={doctor}>
+              <option value="">Select Doctor</option>
+              <option value="Dr Sharma">Dr. Sharma</option>
+              <option value="Dr Patel">Dr. Patel</option>
+              <option value="Dr Mehta">Dr. Mehta</option>
+            </select>
+          </div>
+
+          <div className="input-box">
+            <textarea placeholder="Describe your problem" ref={problem}/>
+          </div>
+
+          <button type="submit" className="btn">
+            Confirm Appointment
+          </button>
+
+        </form>
+      </div>
+    </div>
+    <ToastContainer />
     </>
   )
 }
-
-export default App

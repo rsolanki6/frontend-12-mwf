@@ -1,0 +1,104 @@
+{
+     "customer" : [
+          {
+               "id": 1,
+               "name": "John Doe",
+               "email": "john.doe@example.com"
+          },
+          {
+               "id": 2,
+               "name": "Jane Smith",
+               "email": "jane.smith@example.com"
+          }
+     ],
+
+     "reviews" : [
+          {
+               "id": 1,
+               "customerId": 1,
+               "product": "Laptop",
+               "rating": 4,
+               "comment": "Great product!"
+          },
+          {
+               "id": 2,
+               "customerId": 2,
+               "product": "iPhone 15",
+               "rating": 5,
+               "comment": "Excellent quality!"
+          }
+     ],
+
+     "products" : [
+          {
+               "id": 1,
+               "name": "Laptop",
+               "price": 29.99,
+               "photo": "https://m.media-amazon.com/images/I/510uTHyDqGL.jpg"
+          },
+          {
+               "id": 2,
+               "name": "iPhone 15",
+               "price": 49.99,
+               "photo": "https://darlingretail.com/cdn/shop/files/iPhone_15_Blue_Pure_Back_iPhone_15_Blue_Pure_Front_2up_Screen__WWEN_600x.jpg?v=1695103868"
+          }
+     ],
+
+     "suppliers" : [
+          {
+               "id": 1,
+               "name": "Supplier X",
+               "contact": "contact@supplierx.com"
+          },
+          {
+               "id": 2,
+               "name": "Supplier Y",
+               "contact": "contact@suppliery.com"
+          }
+     ],
+
+     "bill" : [
+          {
+               "id": 1,
+               "customerId": 1,
+               "amount": 29.99,
+               "date": "2024-08-01"
+          },
+          {
+               "id": 2,
+               "customerId": 2,
+               "amount": 49.99,
+               "date": "2024-08-02"
+          },
+          {
+               "id": 3,
+               "customerId": 1,
+               "amount": 79.98,
+               "date": "2024-08-03"
+          }
+     ],
+
+     "payments" : [
+          {
+               "id": 1,
+               "customerId": 1,
+               "amount": 29.99,
+               "date": "2024-08-01",
+               "method": "Credit Card"
+          },
+          {
+               "id": 2,
+               "customerId": 2,
+               "amount": 49.99,
+               "date": "2024-08-02",
+               "method": "PayPal"
+          },
+          {
+               "id": 3,
+               "customerId": 1,
+               "amount": 79.98,
+               "date": "2024-08-03",
+               "method": "Credit Card"
+          }
+     ]
+}
