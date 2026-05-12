@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#ffb690",
+            "on-secondary": "#ffffff",
+            "surface": "#f7f9fb",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#131b2e",
+            "surface-container-high": "#e6e8ea",
+            "surface-dim": "#d8dadc",
+            "on-secondary-fixed": "#00201d",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-fixed-variant": "#783200",
+            "tertiary": "#000000",
+            "surface-container-highest": "#e0e3e5",
+            "on-primary": "#ffffff",
+            "primary": "#000000",
+            "on-tertiary-fixed": "#341100",
+            "secondary-fixed-dim": "#6bd8cb",
+            "inverse-on-surface": "#eff1f3",
+            "inverse-surface": "#2d3133",
+            "primary-fixed-dim": "#bec6e0",
+            "on-primary-container": "#7c839b",
+            "on-secondary-fixed-variant": "#005049",
+            "surface-container-low": "#f2f4f6",
+            "outline-variant": "#c6c6cd",
+            "surface-bright": "#f7f9fb",
+            "error": "#ba1a1a",
+            "on-tertiary": "#ffffff",
+            "primary-fixed": "#dae2fd",
+            "secondary-fixed": "#89f5e7",
+            "secondary": "#006a61",
+            "on-surface-variant": "#45464d",
+            "tertiary-fixed": "#ffdbca",
+            "outline": "#76777d",
+            "inverse-primary": "#bec6e0",
+            "on-tertiary-container": "#d95f00",
+            "surface-container": "#eceef0",
+            "surface-tint": "#565e74",
+            "on-secondary-container": "#006f66",
+            "on-error-container": "#93000a",
+            "background": "#f7f9fb",
+            "on-primary-fixed-variant": "#3f465c",
+            "tertiary-container": "#341100",
+            "on-surface": "#191c1e",
+            "on-background": "#191c1e",
+            "secondary-container": "#86f2e4",
+            "on-primary-fixed": "#131b2e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "32px",
+            "sm": "16px",
+            "base": "4px",
+            "gutter": "24px",
+            "md": "24px",
+            "xs": "8px",
+            "xl": "80px",
+            "max_width": "1280px",
+            "lg": "48px"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "h3": ["Inter"],
+            "h1": ["Inter"],
+            "h2": ["Inter"],
+            "button": ["Inter"]
+          },
+          "fontSize": {
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "h2": ["36px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .active-nav-link {
+      color: #0d9488; /* teal-600 match */
+      border-bottom: 2px solid #14b8a6; /* teal-500 match */
+      padding-bottom: 4px;
+    }
+  </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 border-b border-slate-200/50 bg-white/80 backdrop-blur-lg shadow-lg shadow-slate-900/5 h-20">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-6 h-full">
+<div class="text-2xl font-black tracking-tighter text-slate-900">LUXE</div>
+<nav class="hidden md:flex items-center gap-8 font-inter text-sm font-medium tracking-wide">
+<a class="active-nav-link" href="#">Home</a>
+<a class="text-slate-600 hover:text-teal-600 transition-colors" href="#">Shop</a>
+<a class="text-slate-600 hover:text-teal-600 transition-colors" href="#">Reviews</a>
+<a class="text-slate-600 hover:text-teal-600 transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-label-sm focus:ring-2 focus:ring-secondary/20 w-64 transition-all" placeholder="Search..." type="text"/>
+</div>
+<div class="flex items-center gap-4 text-slate-900">
+<button class="hover:text-teal-500 transition-all duration-200"><span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span></button>
+<button class="hover:text-teal-500 transition-all duration-200"><span class="material-symbols-outlined" data-icon="account_circle">account_circle</span></button>
+</div>
+</div>
+</div>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="minimalist high-end fashion photography featuring a luxury watch and silk scarf on a marble surface with soft natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUrAnfroFTZq4bxzuS8kdb2bYneJgJxNPQPxw3crkdNNC4BjhilE4CIkBsqTNdpoJa_-IR_q__3QEPsAPkJ4Lz_Mb2b784xzztzZQYFpJRwwCiq3TyTZrrjaRhoJvp_eo8P3O2Fj_oof0EKaTfBfSuxKgF_DRMP-eXJgunpthV_t3hrLMmS_UkM3_uzmKk4-g3m8eIMC5BrZWyVrWl5PNM_V_7sG-3INXmRhzrFPY2RmN6CAvU0DSTHQCiOuQOqhj-mzMVseK8GzY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1280px] mx-auto px-6 w-full">
+<div class="max-w-xl">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-label-sm rounded-full mb-6">New Collection 2024</span>
+<h1 class="font-h1 text-h1 text-primary mb-6">Elevate Your Everyday Essentials</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">Experience the perfect blend of modern craftsmanship and timeless design. Our curated selection brings luxury to your doorstep.</p>
+<div class="flex gap-4">
+<button class="bg-secondary text-white px-10 py-4 rounded-lg font-button hover:bg-on-secondary-fixed-variant transition-all shadow-xl shadow-secondary/20">Shop Now</button>
+<button class="bg-white border border-outline/20 text-primary px-10 py-4 rounded-lg font-button hover:bg-surface-container transition-all">View Lookbook</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Grid -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl">
+<div class="flex items-end justify-between mb-lg">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-2">Curated Categories</h2>
+<p class="text-on-surface-variant">Find exactly what you need for your lifestyle.</p>
+</div>
+<a class="text-secondary font-button flex items-center gap-2 hover:gap-3 transition-all" href="#">View All <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-slate-900/5">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close up of premium leather handbag and designer sunglasses on a clean studio background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS69_NjVLTWlojbJYhwyOxZNFipDJIwMevqcSbumSJ3QQdBoCbQ9UjRetlhSJR7vjJ2T2y5Brt3KYS-FnzJya1s_5Rlz86k0vMQknjqCbWVoS2l_eukk6ha0u9tGrAfMaat1cDPbm0rk3oxlo77bPpFQmIM1ZCDwHathjU0-IfWnRR1eyj651oG6kmNRLj_9-9OigyqZbHbdrpgnZQTKdsjms6zrEyg0k_GypBj408e4mzH8IeKKOogodkL5JtEtNIyVUEr_9-LhM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-h3 text-h3 mb-2">Accessories</h3>
+<p class="text-white/80 text-label-sm">Premium leather &amp; metals</p>
+</div>
+</div>
+<div class="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-slate-900/5">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="modern minimalist apparel hanging on a wooden rack in a bright white airy boutique setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUYr7MrSbNMLswrARa41LJhJKttIkDzhAqN4vzaSV870xdOJ7dzUulZMQWc9ndoCWYWIHNSAP0uRDeQ4htvijJX4L6vypJJrUNeU2PeU7qGjZQbAVbyNWkFOmKf-fD8-GMARfAKhhvxd6gH58I8YRL22gdbjcOsWQecQbCwfjkyfkSHPzluc96_KuvbwkIQZE9bQGk2ejJlHkf27WVpA8gXxlppZYsOjTyGBIKJ1XTugzAJFHiTAvWiy_PpDd5PL-jCZYZAG5ckNA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-h3 text-h3 mb-2">Ready-to-Wear</h3>
+<p class="text-white/80 text-label-sm">Sustainable fine fabrics</p>
+</div>
+</div>
+<div class="group relative aspect-[4/5] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-slate-900/5">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="minimalist living room interior featuring architectural ceramic vases and a premium linen candle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPb5ITOCi6PH1TtqmLwuYAOuGOVhNpfYazGhGSGOr1ep-UOu8N-lwiq4Yf3TeMtCL6ETVaHQmv663pu8z4o967y-ooscZ-SKDBRJRJjhS4-sPL-eesJqcWut-kEzSXjBwxa-r0g3MVqwZDZOWSTiiTEOBRyNhy15NdJ2j8JCjJwZZ5pe56oubZ3wFgEYcSk9QyeyiiSlproYaUaKmLnfAwLyKTIoRromAS-BqhEyaQuOEfm6h0Nx2mbMY4ldZt30KFsaDJcV6PoSU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-h3 text-h3 mb-2">Home Decor</h3>
+<p class="text-white/80 text-label-sm">Artisanal living pieces</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="text-center mb-lg">
+<h2 class="font-h2 text-h2 text-primary mb-4">Featured Selection</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Discover our most-loved pieces, crafted with meticulous attention to detail and uncompromising quality.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-lg shadow-slate-900/5 hover:-translate-y-1 transition-all duration-300">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="minimalist gold link necklace on a soft beige linen texture with professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAow0e3q7BDdeIw7ckhviEHTPLEitA_vHUbur9LNid0ZU0vaFk12oOM_rYtycKS8B7tdhIzaUailkX8g_KBiTUUJbgGljut2ETBsR5iAPiKokdGnQvcUY2_hdJkF-ZiLWGskiNXEFcMFAelg3SHwdPyhV9uQBj0EJmiUbga_qIVozfJjBqfavGoaEuLDvYU7zg7zV69LoVo6siRZn8guwtMIoZblZugKxF8YzOujDU9e5Mi9VW9LbzS1oQfiLJOTwg1BkWSilLzH5M"/>
+<button class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<p class="text-label-sm text-secondary font-semibold mb-2">New Arrival</p>
+<h4 class="font-h3 text-[18px] text-primary mb-1">Celestial Gold Link</h4>
+<p class="text-body-md font-bold text-primary mb-6">$240.00</p>
+<button class="w-full py-3 bg-primary text-white rounded-lg font-button flex items-center justify-center gap-2 hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="shopping_cart">shopping_cart</span>
+                Add to Cart
+              </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-lg shadow-slate-900/5 hover:-translate-y-1 transition-all duration-300">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="sleek modern black leather watch with silver dial isolated on a dark moody surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUQmjwDPeollSSqhscSRQZ0ZWJm71UzP3JxLLOIkKX6uOfYmw7S8nYKMbO9QLOrrGiE7mD0VIPefuKAcJzM0J34HoMyxlsQN2EfDYl82TOejEK3QskF-eMqLSofVS8c5Z9hPpJFO1v1UWhY437JMRBsMRlVK6og2a2NE-q5lLjubPpeBmRVGiwvGe5TmW3w5SMS6f-z9IQWGhEO6YGqZTRcodvxMZnWugxnMM6n-fMfISGm3U3dJH6ONn9p6-hQkZAlLpNrArobg"/>
+<button class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<p class="text-label-sm text-slate-500 mb-2">Timepieces</p>
+<h4 class="font-h3 text-[18px] text-primary mb-1">Noir Executive Watch</h4>
+<p class="text-body-md font-bold text-primary mb-6">$580.00</p>
+<button class="w-full py-3 bg-primary text-white rounded-lg font-button flex items-center justify-center gap-2 hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="shopping_cart">shopping_cart</span>
+                Add to Cart
+              </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-lg shadow-slate-900/5 hover:-translate-y-1 transition-all duration-300">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="premium white leather sneakers on a minimalist grey concrete pedestal with bright top lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuAc-iBM-q0WfysA9ZSGgWRMpOQA5GU-IQB8orD5A9dbVugMqe7rQFeM3sdhooCayMK0EIZ7TNm0Py9EOyCT5-sjh-8i4AHmteof7a3XyJCACw1Uc70dxIc-bNwF6f5MN1uQqy8nGLbqcEIZNZvhqw_IQSlAFANVrrM-EhjgTauGtqMhe5kq-k3-fAgRaAQQopcBmSpDM76O7d1XIHclF3Smo8pQaVJ1fJy0Tkqnd1rTlbqohdh4R6jT4_nHjCkjRljSgCCQ9t2ss"/>
+<button class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<p class="text-label-sm text-slate-500 mb-2">Footwear</p>
+<h4 class="font-h3 text-[18px] text-primary mb-1">Canvas Low Top</h4>
+<p class="text-body-md font-bold text-primary mb-6">$125.00</p>
+<button class="w-full py-3 bg-primary text-white rounded-lg font-button flex items-center justify-center gap-2 hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="shopping_cart">shopping_cart</span>
+                Add to Cart
+              </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-lg shadow-slate-900/5 hover:-translate-y-1 transition-all duration-300">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="handcrafted ceramic coffee set in matte black on a warm oak wood table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlqgFAsAOPYh5W78XAsT8vkdexlTjWtIdOUN1Tgv941bZ9ww0U6F1qik11avHT7bMr8LAPM011qXKo1mf8Ru_S8bdz9oxG5tYoW_0KPyoNJWwOG2SnytTGAKchgLoYArkL0VI58ZTuXootQ5TiCmCwCu-ShHdMVEn4XM0J6gDGPkAoRfZg8jP1knC1DdTE4PeRUtL7V1iwxw9Ry1aQVg5wC8_DbJQEjnGCZVWjbfh0aXQj23U0dmW4w0FwFqCih5-Gqv9yP1uuUsY"/>
+<button class="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<p class="text-label-sm text-secondary font-semibold mb-2">Limited Edition</p>
+<h4 class="font-h3 text-[18px] text-primary mb-1">Hand-thrown Ceramics</h4>
+<p class="text-body-md font-bold text-primary mb-6">$85.00</p>
+<button class="w-full py-3 bg-primary text-white rounded-lg font-button flex items-center justify-center gap-2 hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="shopping_cart">shopping_cart</span>
+                Add to Cart
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Offer Banner -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl">
+<div class="relative rounded-[2rem] overflow-hidden bg-primary text-white p-12 md:p-20 flex flex-col md:flex-row items-center gap-10">
+<div class="flex-1 space-y-6">
+<h2 class="font-h1 text-h1 tracking-tight">The Mid-Season Event</h2>
+<p class="text-body-lg text-slate-300">Enjoy exclusive access to our private sale. Sign up now and receive up to 30% off on selected archival pieces.</p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-secondary text-white px-8 py-4 rounded-full font-button hover:bg-on-secondary-container transition-all">Unlock Access</button>
+<div class="flex items-center gap-2 px-4 text-label-sm font-medium border border-slate-700 rounded-full">
+              CODE: LUXE30
+            </div>
+</div>
+</div>
+<div class="flex-1 w-full max-w-md">
+<img class="rounded-2xl shadow-2xl shadow-black/40 rotate-3 group-hover:rotate-0 transition-transform duration-700" data-alt="stylish architectural detail of a modern glass building reflecting a vibrant orange sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj-apbIRYwtlEqa3lMfECzbgl8hOEOaXyVjDanEPuK2bBWg9FGRQzNPJ0ErhDTQ3T3YYGWOTvAr4uAhhM3hzLzNECESHk7kHzAxHOHFUmSmW60c3Kv86Ksb0025F9KqUX9P5bakJzTL-oKYBuOfKibsXHo9tNi93Diq56KGI1a9Nt8Oud3PZmVt_i99ei22u8LBaalfUwjcGjC0wU7EK346L8MZNbxXUDseZC5uN_B98dhY2cAGtINWiHSkdVWLvbS-dDD8dZlpe0"/>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-gutter">
+<div class="lg:col-span-1 py-4">
+<h2 class="font-h2 text-h2 text-primary mb-4">What Our Clients Say</h2>
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+<span class="material-symbols-outlined fill">star</span>
+</div>
+<p class="text-on-surface-variant">4.9/5 Average Rating from over 10,000+ happy customers worldwide.</p>
+</div>
+<div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 bg-white rounded-2xl shadow-lg shadow-slate-900/5">
+<p class="text-body-md text-on-surface mb-8 italic">"The quality of the leather is exceptional. I've bought high-end brands before, but LUXE truly stands out in durability and design."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="portrait of a sophisticated young man with glasses in a minimalist studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmbtRRzA_yKBGqIu6fLVcjKU2qvOT5j3B1xvnntt4L4PFEze4CZGWvwGExgQNfePfpLFiYV2QxWyTBntDQUvHSKiD3KlSp2aDETWBAdagDgQVvZetpyce-l_9HbQOT8mqE9p6v9l4wN6yDIT6ZmZir-k4uzrB2SP4Otw6y68OINfHAz_I9nCWM4jJBgQD4JvY4C-S0MwXT2Qba3d4Qwqi-XFlj1imAzMUjg5sywHMC9prjfG_7DjswNUT5mDhlbwRP4cyrTRttlzw"/>
+</div>
+<div>
+<p class="font-bold text-primary">Marcus H.</p>
+<p class="text-label-sm text-slate-500">Verified Buyer</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-white rounded-2xl shadow-lg shadow-slate-900/5">
+<p class="text-body-md text-on-surface mb-8 italic">"Customer service was so responsive when I needed a size exchange. The new items arrived within 48 hours. Simply impressive."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional woman with a warm smile wearing a neutral tone silk blouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkKe4CmxM397Qgbnk6Jgp4NjStOJOivDGFfclnebpUda9LtDDuTKX98h6-Afd9Knw6njoU8YtFJEv8QCVsoQgcXDgBW5Il0k-DVFTwzJXGRvhiRML-x8DJUspVZPq5bxVFtcBGz8z00jEwvauc5f9pN7EyGaKpvT7F23kwiqbuxpVeHVFgOupa7WVN7zUAjxnrKSYnfA2iT-W-nD7lImRFMh99bQIl0p6V-ioF88pF4UJpgQ2qUFwbPY5PYNp5Zl3X2mZs3y74fmk"/>
+</div>
+<div>
+<p class="font-bold text-primary">Sarah J.</p>
+<p class="text-label-sm text-slate-500">Verified Buyer</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-white rounded-2xl shadow-lg shadow-slate-900/5">
+<p class="text-body-md text-on-surface mb-8 italic">"Absolutely love the minimalist aesthetic. It fits perfectly with my home decor. Every piece feels like a work of art."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="close up profile of an elegant woman with minimalist jewelry in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS9XmrrHI_tWxvue2dAOFgtNa0dWU9E1-EcjrucNcJQB05P-ibrc5bh6OiTyVcOo3hqr5hxmqviDVvyyv-ncvj8pHfrHbXS_PVuem4pFKO6pi8BcOBGcS1AWUAvgwqlZsBcHlctfPMBtq_YpVzdjamfC0rgLDsJMtn_HM4tT-T-7KePyTegHWZXw2bv-ZJt4OTqMg3Bc6CQGgNwOb9MnYQAYRt78IkaqyuJ5fduYmMH5eGSBcY70YW38Af-o6IR4Qln8hDfzwbU4Y"/>
+</div>
+<div>
+<p class="font-bold text-primary">Elena G.</p>
+<p class="text-label-sm text-slate-500">Verified Buyer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-slate-900 border-t border-slate-800">
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<span class="text-xl font-bold text-white mb-6 block">LUXE</span>
+<p class="text-slate-400 text-sm leading-relaxed">Defining the future of luxury commerce through thoughtful design and curated excellence since 2024.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 font-inter text-sm text-slate-400">
+<li><a class="hover:text-teal-400 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-teal-400 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-teal-400 transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-teal-400 transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Categories</h4>
+<ul class="space-y-4 font-inter text-sm text-slate-400">
+<li><a class="hover:text-teal-400 transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-teal-400 transition-colors" href="#">Best Sellers</a></li>
+<li><a class="hover:text-teal-400 transition-colors" href="#">Accessories</a></li>
+<li><a class="hover:text-teal-400 transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Newsletter</h4>
+<p class="text-slate-400 text-sm mb-4">Join our community for early access and styling tips.</p>
+<div class="flex">
+<input class="bg-slate-800 border-none rounded-l-lg text-white p-3 w-full focus:ring-1 focus:ring-teal-400" placeholder="Email address" type="email"/>
+<button class="bg-teal-500 text-white px-4 rounded-r-lg hover:bg-teal-400 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-6 mt-20 pt-10 border-t border-slate-800 text-center">
+<p class="font-inter text-sm text-slate-400">© 2024 LUXE Corporate. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

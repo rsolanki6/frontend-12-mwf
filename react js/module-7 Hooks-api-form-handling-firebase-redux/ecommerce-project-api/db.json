@@ -1,0 +1,19 @@
+{
+  "feedback": [
+    {
+      "name": "john",
+      "email": "john@gmail.com",
+      "msg": "this is the first customer review",
+      "rate": "4star",
+      "id": "QJwjDjakJ3E"
+    },
+    {
+      "name": "john",
+      "email": "john@gmail.com",
+      "msg": "the product are good specially the watches are goog",
+      "rate": "5star",
+      "id": "lT4JbC4qA9I"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
