@@ -13,6 +13,20 @@
       "msg": "the product are good specially the watches are goog",
       "rate": "5star",
       "id": "lT4JbC4qA9I"
+    },
+    {
+      "name": "rohan",
+      "email": "rohan@gmail.com",
+      "msg": "hii i am come to this website so many times there products are very good",
+      "rate": "5star",
+      "id": "FcnDfZAjM9w"
+    },
+    {
+      "name": "brijesh",
+      "email": "brijesh@gmail.com",
+      "msg": "hii i am new here",
+      "rate": "5star",
+      "id": "yyg_kBmQNOo"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
