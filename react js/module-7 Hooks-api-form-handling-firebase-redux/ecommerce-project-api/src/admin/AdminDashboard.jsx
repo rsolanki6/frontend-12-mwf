@@ -3,6 +3,7 @@ import { FaUser } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa6";
 import { FaBox } from "react-icons/fa";
+import CountApp from './CounterApp';
 
 
 export default function AdminDashboard() {

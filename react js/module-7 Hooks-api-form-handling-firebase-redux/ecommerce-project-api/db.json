@@ -27,6 +27,27 @@
       "msg": "hii i am new here",
       "rate": "5star",
       "id": "yyg_kBmQNOo"
+    },
+    {
+      "name": "Rohan",
+      "email": "rohan@gmail.com",
+      "msg": "hi this is rohan ",
+      "rate": "4star",
+      "id": "RYbonu28e74"
+    },
+    {
+      "name": "john ",
+      "email": "john@gmail.com",
+      "msg": "i like the bag's ",
+      "rate": "4star",
+      "id": "k78UFphlztg"
+    },
+    {
+      "name": "yash",
+      "email": "yash@gmail.com",
+      "msg": "i love this phone and they have 1 year of guarantee and warranty",
+      "rate": "4star",
+      "id": "9FCjZekVjWU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

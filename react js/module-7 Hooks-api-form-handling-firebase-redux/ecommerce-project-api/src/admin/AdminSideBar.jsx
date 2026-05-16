@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { FaChartLine } from "react-icons/fa6";
 import { FaBox } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
@@ -20,27 +21,27 @@ export default function AdminSideBar() {
                </div>
                
                <nav className="p-5 space-y-3">
-                    <a href="#" className="flex items-center gap-3 p-3 rounded-xl bg-teal-500 text-white font-semibold">
+                    <Link to="/admin" className="flex items-center gap-3 p-3 rounded-xl bg-teal-500 text-white font-semibold">
                          <FaChartLine />Dashboard
-                    </a>
-                    <a href="#" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+                    </Link>
+                    <Link to="/admin/products" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaBox />Products
-                    </a>
-                    <a href="#" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+                    </Link>
+                    <Link to="/admin/orders" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaCartShopping />Orders
-                    </a>
-                    <a href="#" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+                    </Link>
+                    <Link to="/admin/customers" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaUsers />Customers
-                    </a>
-                    <a href="#" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+                    </Link>
+                    <Link to="/admin/reviews" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaComment />Feedback
-                    </a>
-                    <a href="#" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+                    </Link>
+                    <Link to="/admin/contact-messages" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaEnvelope />Contact Messages
-                    </a>
-                    <a href="#" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+                    </Link>
+                    <Link to="/admin/settings" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaGear />Settings
-                    </a>
+                    </Link>
                </nav>
           </aside>
 
