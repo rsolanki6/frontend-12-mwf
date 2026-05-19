@@ -24,7 +24,7 @@ export default function AdminSideBar() {
                     <Link to="/admin" className="flex items-center gap-3 p-3 rounded-xl bg-teal-500 text-white font-semibold">
                          <FaChartLine />Dashboard
                     </Link>
-                    <Link to="/admin/products" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+                    <Link to="/admin/add-product" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaBox />Products
                     </Link>
                     <Link to="/admin/orders" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
@@ -36,7 +36,7 @@ export default function AdminSideBar() {
                     <Link to="/admin/reviews" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaComment />Feedback
                     </Link>
-                    <Link to="/admin/contact-messages" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+                    <Link to="/admin/contacts" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
                          <FaEnvelope />Contact Messages
                     </Link>
                     <Link to="/admin/settings" className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">

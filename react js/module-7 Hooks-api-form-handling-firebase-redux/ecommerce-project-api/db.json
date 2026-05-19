@@ -48,6 +48,53 @@
       "msg": "i love this phone and they have 1 year of guarantee and warranty",
       "rate": "4star",
       "id": "9FCjZekVjWU"
+    },
+    {
+      "name": "john ",
+      "email": "john@gmail.com",
+      "msg": "hii ",
+      "rate": "4star",
+      "id": "0qocEfgpEXQ"
+    },
+    {
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "msg": "hi",
+      "rate": "4star",
+      "id": "VEjmywsOGzI"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "rohan",
+      "email": "rohan@gmail.com",
+      "subject": "Order Inquiry",
+      "message": "Did you have Rolex",
+      "id": "1JLdAPi-83k"
+    },
+    {
+      "name": "rohan",
+      "email": "rohan@gmail.com",
+      "subject": "Returns",
+      "message": "i want to return this package",
+      "id": "Qi1BgkCcpKE"
+    },
+    {
+      "name": "john ",
+      "email": "john@gmail.com",
+      "subject": "Order Inquiry",
+      "message": "i order a watch last week where it is ",
+      "id": "FGAfA6eIBw8"
+    }
+  ],
+  "product": [
+    {
+      "title": "IPhone 17 pro max",
+      "price": "149900",
+      "description": "Apple Official Site — Introducing iPhone 17 Pro Max. New dimensions in power. Buy now. Designed from the inside out to be the most powerful iPhone models ever made.",
+      "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGFQ4?wid=4000&hei=4000&fmt=jpeg&qlt=90&.v=1757534575976",
+      "category": "Electronics",
+      "id": "zZJZ2jpCcKY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

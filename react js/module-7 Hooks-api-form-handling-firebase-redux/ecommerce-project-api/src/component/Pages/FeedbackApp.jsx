@@ -48,6 +48,7 @@ export default function FeedbackApp() {
       <main className="pt-32 pb-xl px-6 max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
           <section className="lg:col-span-5 lg:sticky lg:top-32">
+            <ToastContainer />
             <div className="mb-lg">
               <h1 className="font-h1 text-h1 text-primary mb-md">
                 Your experience matters.

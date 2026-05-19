@@ -13,6 +13,8 @@ import CartApp from './component/Pages/CartApp'
 // import AdminLogin from './admin/AdminLogin'
 import AdminLayout from './AdminLayout'
 import AdminManageReviews from './admin/AdminManageReviews'
+import AdminContactApp from './admin/AdminContactApp'
+import AdminAddProduct from './admin/AdminAddProduct'
 
 
 createRoot(document.getElementById('root')).render(
@@ -30,6 +32,9 @@ createRoot(document.getElementById('root')).render(
         {/* Admin Routes */}
         <Route path='/admin' element={<AdminLayout />} />
         <Route path='/admin/reviews' element={<AdminManageReviews />} />
+        <Route path='/admin/contacts' element={<AdminContactApp />} />
+        <Route path='/admin/add-product' element={<AdminAddProduct />} />
+
       </Routes>
     </Router>
   </StrictMode>,
