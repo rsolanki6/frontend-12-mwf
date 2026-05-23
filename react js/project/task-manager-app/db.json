@@ -1,0 +1,26 @@
+{
+  "addtask": [
+    {
+      "taskname": "learn how to call api",
+      "priority": "Medium",
+      "addeddate": "2026-05-25",
+      "details": "learn about how to call api ",
+      "id": "vVfBJfCBpP8"
+    },
+    {
+      "taskname": "form handeling",
+      "priority": "High",
+      "addeddate": "2026-05-24",
+      "details": "what is form handeling ",
+      "id": "64EZRXERmJs"
+    },
+    {
+      "taskname": "what is github",
+      "priority": "Low",
+      "addeddate": "2026-05-30",
+      "details": "what is github and how to make repository ",
+      "id": "_l1vT2YkGm8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
