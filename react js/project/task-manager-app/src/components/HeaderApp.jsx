@@ -7,7 +7,7 @@ import {
   FaEdit,
   FaList,
 } from "react-icons/fa";
-
+import CountTask from "./CountTask";
 import { Link } from "react-router-dom";
 
 export default function HeaderApp() {
@@ -57,8 +57,9 @@ export default function HeaderApp() {
                 Update Task
               </Link>
 
-              <div className="bg-teal-500 px-4 py-2 rounded-lg text-sm font-semibold">
-                Total : {totalTasks}
+             <div className="bg-teal-500 px-4 py-2 rounded-xl text-sm font-semibold inline-flex items-center gap-1">
+                <span>Total :</span>
+                <CountTask />
               </div>
 
             </nav>
@@ -95,8 +96,8 @@ export default function HeaderApp() {
               Manage Task
             </Link>
 
-            <div className="bg-teal-500 px-4 py-2 rounded-lg text-center font-semibold">
-              Total Tasks : {totalTasks}
+            <div className="bg-teal-500 px-4 py-2 rounded-xl text-center font-semibold">
+              Total Tasks : <CountTask />
             </div>
 
           </div>

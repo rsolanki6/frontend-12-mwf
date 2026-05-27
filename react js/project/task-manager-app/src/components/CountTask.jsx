@@ -11,7 +11,7 @@ export default function CountTask() {
   
     return (
     <div>
-      {task.length}
+      <span className="rounded-full text-sm text-white">{task.length}</span>
     </div>
   )
 }

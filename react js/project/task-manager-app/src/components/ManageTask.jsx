@@ -2,16 +2,18 @@ import React, { useState,useEffect } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import HeaderApp from "./HeaderApp";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function ManageTask() {
 
   // destructuring of data
-  const[task, setTask]= useState([]);
+  const[task,setTask]=useState([]);
+  const navigate = useNavigate();
   useEffect(()=>{
-      axios.get(`http://localhost:8000/addtask`).then((response)=>{
-          setTask(response.data)
-      })
-  },[task]) 
+    axios.get(`http://localhost:8000/addtask`).then((response)=>{
+      setTask(response.data)
+    })
+  },[task])
 
   return (
     <div className="min-h-screen bg-gray-100 p-5">
@@ -70,9 +72,7 @@ export default function ManageTask() {
                       </span>
                     </td>
                     <td className="px-6 py-4">{items.addeddate}</td>
-                    <td className="px-6 py-4">
-                      {items.details}
-                    </td>
+                    <td className="px-6 py-4">{items.details}</td>
                     <td className="px-6 py-4">
                       <div className="flex items-center justify-center gap-3">
                         {/* Edit Button */}
@@ -80,7 +80,7 @@ export default function ManageTask() {
                           <FaEdit />
                         </button>
                         {/* Delete Button */}
-                        <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl transition duration-300 shadow-md">
+                        <button type="button" onClick={()=>{navigate(`/delete-task/${items.id}`)}} className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl transition duration-300 shadow-md">
                           <FaTrash />
                         </button>
                       </div>
