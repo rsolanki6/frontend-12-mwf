@@ -23,8 +23,9 @@ export default function Layout() {
 
   return (
     <div>
-      <HeaderApp />
-      <AddTaskApp />
+
+     <HeaderApp taskCount={JSON.parse(localStorage.getItem('tasks'))?.length || 0} />
+     <AddTaskApp />
     </div>
   )
 }

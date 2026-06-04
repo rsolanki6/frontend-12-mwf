@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function HeaderApp() {
+export default function HeaderApp({ taskCount }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -17,18 +17,20 @@ export default function HeaderApp() {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex gap-4">
-            <Link
-              to="/"
-              className="bg-slate-700 hover:bg-slate-600 text-white px-5 py-2 rounded-lg transition"
-            >
+            <Link to="/" className="bg-slate-700 hover:bg-slate-600 text-white px-5 py-2 rounded-lg transition">
               Add Task
             </Link>
 
-            <Link
-              to="/manage"
-              className="bg-white hover:bg-slate-100 text-slate-900 px-5 py-2 rounded-lg transition font-medium"
-            >
+            <Link to="/manage" className="bg-white hover:bg-slate-100 text-slate-900 px-5 py-2 rounded-lg transition font-medium">
               Manage Tasks
+            </Link>
+
+            <Link to="/contact" className="bg-white hover:bg-slate-100 text-slate-900 px-5 py-2 rounded-lg transition font-medium">
+              Contact Us 
+            </Link>
+
+            <Link className="text-white py-2 font-bold">
+              Total Tasks: {taskCount || 0}
             </Link>
           </nav>
 
@@ -63,6 +65,14 @@ export default function HeaderApp() {
               className="bg-white hover:bg-slate-100 text-slate-900 px-5 py-3 rounded-lg text-center font-medium"
             >
               Manage Tasks
+            </Link>
+
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="bg-white hover:bg-slate-100 text-slate-900 px-5 py-3 rounded-lg text-center font-medium"
+            >
+              Contact Us
             </Link>
 
           </div>

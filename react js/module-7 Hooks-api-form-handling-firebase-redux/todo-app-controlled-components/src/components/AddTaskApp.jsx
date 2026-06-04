@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { MdDescription } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function AddTask() {
 
@@ -9,6 +10,7 @@ export default function AddTask() {
      const [taskdescription, setTaskDescription] = useState("");
      const [taskDate, setTaskDate] = useState("");
      const [taskPriority, setTaskPriority] = useState("Low");
+     const navigate=useNavigate();
 
 
      // create a function of form handeling to add all data in locla storage
@@ -29,6 +31,7 @@ export default function AddTask() {
           localStorage.setItem(`tasks`, JSON.stringify(existingTask));
           // show success message
           toast.success('Task added successfully!');
+          navigate('/manage');
 
           // clear the form
           setTaskTitle("");
