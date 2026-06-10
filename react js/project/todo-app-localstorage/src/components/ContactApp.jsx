@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
-import { useNavigate } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
-import Header from './Header';
- import { ToastContainer, toast } from 'react-toastify';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+import HeaderApp from "./HeaderApp";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function ContactApp() {
 // create a desructured state for add task via form 
@@ -30,12 +30,8 @@ const YOUR_PUBLIC_KEY="JPe-bVJe1GBhHEeLw";
         };
   
         // for send email set email js method 
-        emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, newContact, YOUR_PUBLIC_KEY)
-        .then((response) => {
-          console.log('Email sent successfully!', response.status, response.text);
-        }, (error) => {
-          console.error('Failed to send email:', error);
-        });
+        emailjs.sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, e.target, YOUR_PUBLIC_KEY)
+
         // Add the new task to local storage
         const existingTasks = JSON.parse(localStorage.getItem('contact')) || [];
         existingTasks.push(newContact);
@@ -50,7 +46,6 @@ const YOUR_PUBLIC_KEY="JPe-bVJe1GBhHEeLw";
         setSubject('');
         setMessage('');
     };
-
 
   return (
     <>
@@ -78,7 +73,7 @@ const YOUR_PUBLIC_KEY="JPe-bVJe1GBhHEeLw";
             </div>
           </div>
 
-          {/* Right Side */}
+          {/* Right Side Form */}
           <div className="bg-white rounded-3xl text-black shadow-2xl p-8">
             <ToastContainer />
 
@@ -180,14 +175,14 @@ const YOUR_PUBLIC_KEY="JPe-bVJe1GBhHEeLw";
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   type="submit"
-                  className="flex-1 bg-teal-500 hover:bg-teal-600 text-white py-3 rounded-xl font-semibold transition"
+                  className="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-3 rounded-xl font-semibold transition"
                 >
                   Send Message
                 </button>
 
                 <button
                   type="button"
-                  onClick={handleReset}
+                  // onClick={handleReset}
                   className="flex-1 bg-red-500 hover:bg-red-600 text-white py-3 rounded-xl font-semibold transition"
                 >
                   Reset Form
