@@ -76,7 +76,7 @@ export default function ManageTask() {
                     <td className="px-6 py-4">
                       <div className="flex items-center justify-center gap-3">
                         {/* Edit Button */}
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl transition duration-300 shadow-md">
+                        <button type="button" onClick={() =>navigate(`/update-task/${item.id}`)} className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl transition duration-300 shadow-md">
                           <FaEdit />
                         </button>
                         {/* Delete Button */}

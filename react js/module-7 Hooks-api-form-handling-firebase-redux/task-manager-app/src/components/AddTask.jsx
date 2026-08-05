@@ -54,11 +54,9 @@ export default function AddTask() {
         {/* Left Side GIF */}
         <div className="hidden lg:flex items-center justify-center bg-teal-500 p-8">
 
-          <img
-            src="https://media.giphy.com/media/L8K62iTDkzGX6/giphy.gif"
+          <img src="https://media.giphy.com/media/L8K62iTDkzGX6/giphy.gif"
             alt="Task Manager"
-            className="w-full max-w-md rounded-2xl"
-          />
+            className="w-full max-w-md rounded-2xl"/>
 
         </div>
 
