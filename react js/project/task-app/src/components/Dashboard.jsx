@@ -1,34 +1,16 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Header from "./Header";
-import {
-  Search,
-  Plus,
-  X,
-  Pencil,
-  Trash2,
-  Eye,
-} from "lucide-react";
+import { Search, Plus, X, Pencil, Trash2, Eye, } from "lucide-react";
 
 export default function Dashboard() {
-  // -----------------------------------------
-  // State
-  // -----------------------------------------
-
   const [activeTab, setActiveTab] = useState("Shift Request");
-
   const [showModal, setShowModal] = useState(false);
-
   const [editingRequest, setEditingRequest] = useState(null);
-
   const [viewingRequest, setViewingRequest] = useState(null);
-
   const [statusFilter, setStatusFilter] = useState("Pending");
-
   const [search, setSearch] = useState("");
-
   const [requests, setRequests] = useState(() => {
-    const savedRequests = localStorage.getItem("shiftRequests");
-
+  const savedRequests = localStorage.getItem("shiftRequests");
     return savedRequests
       ? JSON.parse(savedRequests)
       : [];
@@ -42,20 +24,12 @@ export default function Dashboard() {
     reason: "",
   });
 
-  // -----------------------------------------
-  // Save requests to localStorage
-  // -----------------------------------------
-
   useEffect(() => {
     localStorage.setItem(
       "shiftRequests",
       JSON.stringify(requests)
     );
   }, [requests]);
-
-  // -----------------------------------------
-  // Tabs
-  // -----------------------------------------
 
   const tabs = [
     "Leave Request",
@@ -65,11 +39,6 @@ export default function Dashboard() {
     "Attendance Request",
     "Overtime Request (7)",
   ];
-
-  // -----------------------------------------
-  // Form change
-  // -----------------------------------------
-
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -78,10 +47,6 @@ export default function Dashboard() {
       [name]: value,
     }));
   };
-
-  // -----------------------------------------
-  // Open Add Modal
-  // -----------------------------------------
 
   const openAddModal = () => {
     setEditingRequest(null);
@@ -96,10 +61,6 @@ export default function Dashboard() {
 
     setShowModal(true);
   };
-
-  // -----------------------------------------
-  // Add / Update Request
-  // -----------------------------------------
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -136,19 +97,12 @@ export default function Dashboard() {
     else {
       const newRequest = {
         id: Date.now(),
-
         currentShift: formData.currentShift,
-
         requestedShift: formData.requestedShift,
-
         fromDate: formData.fromDate,
-
         toDate: formData.toDate,
-
         reason: formData.reason,
-
         status: "Pending",
-
         createdAt: new Date().toISOString(),
       };
 
@@ -161,10 +115,7 @@ export default function Dashboard() {
     closeModal();
   };
 
-  // -----------------------------------------
   // Edit Request
-  // -----------------------------------------
-
   const handleEdit = (request) => {
     setEditingRequest(request);
 
@@ -179,18 +130,12 @@ export default function Dashboard() {
     setShowModal(true);
   };
 
-  // -----------------------------------------
   // View Request
-  // -----------------------------------------
-
   const handleView = (request) => {
     setViewingRequest(request);
   };
 
-  // -----------------------------------------
   // Delete Request
-  // -----------------------------------------
-
   const handleDelete = (id) => {
     const confirmed = window.confirm(
       "Are you sure you want to delete this request?"
@@ -205,15 +150,10 @@ export default function Dashboard() {
     );
   };
 
-  // -----------------------------------------
   // Close Add/Edit Modal
-  // -----------------------------------------
-
   const closeModal = () => {
     setShowModal(false);
-
     setEditingRequest(null);
-
     setFormData({
       currentShift: "",
       requestedShift: "",
@@ -223,10 +163,7 @@ export default function Dashboard() {
     });
   };
 
-  // -----------------------------------------
   // Filter Requests
-  // -----------------------------------------
-
   const filteredRequests = useMemo(() => {
     return requests.filter((request) => {
       const matchesStatus =
@@ -256,103 +193,50 @@ export default function Dashboard() {
     });
   }, [requests, statusFilter, search]);
 
-  // -----------------------------------------
   // Render
-  // -----------------------------------------
-
   return (
     <div className="flex min-h-screen flex-col bg-[#edf2f7]">
-
       {/* Header */}
       <Header />
-
       {/* Main */}
       <main className="flex-1 px-[60px] py-[16px]">
-
-        {/* -------------------------------- */}
         {/* Filter Section */}
-        {/* -------------------------------- */}
-
         <div className="mb-[25px] rounded border border-[#e0e4e8] bg-white px-[30px] py-[26px]">
-
           <div className="flex items-center gap-[30px]">
-
             {/* Status */}
             <div className="flex items-center gap-[25px]">
-
-              <label className="text-[13px] text-[#333]">
-                Status
-              </label>
-
-              <select
-                value={statusFilter}
+              <label className="text-[13px] text-[#333]">Status</label>
+              <select value={statusFilter}
                 onChange={(e) =>
                   setStatusFilter(e.target.value)
                 }
-                className="h-[35px] w-[174px] rounded border border-[#b9c9dc] bg-white px-3 text-[13px] text-[#666] outline-none"
-              >
-                <option value="All">
-                  All
-                </option>
-
-                <option value="Pending">
-                  Pending
-                </option>
-
-                <option value="Approved">
-                  Approved
-                </option>
-
-                <option value="Rejected">
-                  Rejected
-                </option>
+                className="h-[35px] w-[174px] rounded border border-[#b9c9dc] bg-white px-3 text-[13px] text-[#666] outline-none">
+                <option value="All">All</option>
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
               </select>
-
             </div>
 
             {/* From Date */}
-            <input
-              type="date"
-              className="h-[35px] w-[165px] rounded border border-[#b9c9dc] px-3 text-[13px] outline-none"
-            />
-
+            <input type="date" className="h-[35px] w-[165px] rounded border border-[#b9c9dc] px-3 text-[13px] outline-none"/>
             {/* To Date */}
-            <input
-              type="date"
-              className="h-[35px] w-[165px] rounded border border-[#b9c9dc] px-3 text-[13px] outline-none"
-            />
-
+            <input type="date" className="h-[35px] w-[165px] rounded border border-[#b9c9dc] px-3 text-[13px] outline-none"/>
             {/* Search Button */}
-            <button
-              type="button"
-              className="flex h-[35px] items-center gap-1.5 rounded bg-[#20bd7a] px-[14px] text-[13px] text-white hover:bg-[#18a96b]"
-            >
-              <Search size={15} />
-
-              Search
+            <button type="button" className="flex h-[35px] items-center gap-1.5 rounded bg-[#20bd7a] px-[14px] text-[13px] text-white hover:bg-[#18a96b]">
+              <Search size={15} />Search
             </button>
 
             {/* Add Request */}
-            <button
-              type="button"
-              onClick={openAddModal}
-              className="ml-auto flex h-[35px] items-center gap-1 rounded bg-[#337ab7] px-[14px] text-[13px] text-white hover:bg-[#286090]"
-            >
-              <Plus
-                size={16}
-                strokeWidth={3}
-              />
-
+            <button type="button" onClick={openAddModal} className="ml-auto flex h-[35px] items-center gap-1 rounded bg-[#337ab7] px-[14px] text-[13px] text-white hover:bg-[#286090]">
+              <Plus size={16} strokeWidth={3} />
               Add Request
             </button>
 
           </div>
         </div>
 
-        {/* -------------------------------- */}
         {/* Tabs */}
-        {/* -------------------------------- */}
-
         <div className="flex h-[44px]">
 
           {tabs.map((tab) => (
@@ -375,158 +259,67 @@ export default function Dashboard() {
 
         </div>
 
-        {/* -------------------------------- */}
         {/* Table */}
-        {/* -------------------------------- */}
-
         <div className="min-h-[300px] border border-[#ddd] bg-white px-[30px] py-[30px]">
-
           {/* Table Header */}
           <div className="mb-[14px] flex items-center justify-between">
-
             <div className="flex items-center gap-1">
-
               <select className="h-[30px] w-[80px] rounded border border-[#b9c9dc] bg-white px-2 text-[12px] text-[#555]">
-                <option>
-                  25
-                </option>
-
-                <option>
-                  50
-                </option>
-
-                <option>
-                  100
-                </option>
+                <option>25</option>
+                <option>50</option>
+                <option>100</option>
               </select>
-
-              <span className="text-[13px] text-[#333]">
-                records
-              </span>
-
+              <span className="text-[13px] text-[#333]">records</span>
             </div>
 
             {/* Search */}
             <div className="flex items-center gap-2">
-
-              <label className="text-[13px] text-[#333]">
-                Search:
-              </label>
-
-              <input
-                type="text"
+              <label className="text-[13px] text-[#333]">Search:</label>
+              <input type="text"
                 value={search}
                 onChange={(e) =>
                   setSearch(e.target.value)
                 }
-                className="h-[30px] w-[180px] rounded border border-[#b9c9dc] px-2 text-[13px] outline-none"
-              />
-
+                className="h-[30px] w-[180px] rounded border border-[#b9c9dc] px-2 text-[13px] outline-none"/>
             </div>
-
           </div>
 
-          {/* -------------------------------- */}
           {/* Shift Request Table */}
-          {/* -------------------------------- */}
-
           {activeTab === "Shift Request" ? (
-
             <div className="overflow-x-auto">
-
               <table className="w-full border-collapse text-[13px]">
-
                 <thead>
-
                   <tr className="h-[42px] border border-[#d9e0e7] bg-[#fafafa]">
-
-                    <th className="px-[12px] text-left font-bold">
-                      No
-                    </th>
-
-                    <th className="px-[12px] text-left font-bold">
-                      Current Shift
-                    </th>
-
-                    <th className="px-[12px] text-left font-bold">
-                      Requested Shift
-                    </th>
-
-                    <th className="px-[12px] text-left font-bold">
-                      From Date
-                    </th>
-
-                    <th className="px-[12px] text-left font-bold">
-                      To Date
-                    </th>
-
-                    <th className="px-[12px] text-left font-bold">
-                      Reason
-                    </th>
-
-                    <th className="px-[12px] text-left font-bold">
-                      Status
-                    </th>
-
-                    <th className="px-[12px] text-left font-bold">
-                      Action
-                    </th>
-
+                    <th className="px-[12px] text-left font-bold">No</th>
+                    <th className="px-[12px] text-left font-bold">Current Shift</th>
+                    <th className="px-[12px] text-left font-bold">Requested Shift</th>
+                    <th className="px-[12px] text-left font-bold">From Date</th>
+                    <th className="px-[12px] text-left font-bold">To Date</th>
+                    <th className="px-[12px] text-left font-bold">Reason</th>
+                    <th className="px-[12px] text-left font-bold">Status</th>
+                    <th className="px-[12px] text-left font-bold">Action</th>
                   </tr>
-
                 </thead>
-
                 <tbody>
-
                   {filteredRequests.length === 0 ? (
-
                     <tr className="h-[55px] border-x border-b border-[#d9e0e7]">
-
-                      <td
-                        colSpan="8"
-                        className="text-center text-[#333]"
-                      >
+                      <td colSpan="8" className="text-center text-[#333]">
                         No data available in table
                       </td>
-
                     </tr>
-
                   ) : (
-
                     filteredRequests.map(
                       (request, index) => (
 
-                        <tr
-                          key={request.id}
-                          className="border-x border-b border-[#d9e0e7] hover:bg-gray-50"
-                        >
+                        <tr key={request.id} className="border-x border-b border-[#d9e0e7] hover:bg-gray-50">
 
+                          <td className="px-3 py-3">{index + 1}</td>
+                          <td className="px-3 py-3">{request.currentShift}</td>
+                          <td className="px-3 py-3">{request.requestedShift}</td>
+                          <td className="px-3 py-3">{request.fromDate}</td>
+                          <td className="px-3 py-3">{request.toDate}</td>
+                          <td className="max-w-[200px] px-3 py-3">{request.reason}</td>
                           <td className="px-3 py-3">
-                            {index + 1}
-                          </td>
-
-                          <td className="px-3 py-3">
-                            {request.currentShift}
-                          </td>
-
-                          <td className="px-3 py-3">
-                            {request.requestedShift}
-                          </td>
-
-                          <td className="px-3 py-3">
-                            {request.fromDate}
-                          </td>
-
-                          <td className="px-3 py-3">
-                            {request.toDate}
-                          </td>
-
-                          <td className="max-w-[200px] px-3 py-3">
-                            {request.reason}
-                          </td>
-
-                          <td className="px-3 py-3">
-
                             <span
                               className={`
                                 rounded px-2 py-1 text-xs
@@ -543,12 +336,9 @@ export default function Dashboard() {
                             >
                               {request.status}
                             </span>
-
                           </td>
-
                           {/* Actions */}
                           <td className="px-3 py-3">
-
                             <div className="flex items-center gap-2">
 
                               {/* View */}
@@ -632,11 +422,7 @@ export default function Dashboard() {
         </div>
 
       </main>
-
-      {/* -------------------------------- */}
       {/* Footer */}
-      {/* -------------------------------- */}
-
       <footer className="flex h-[54px] items-center justify-center bg-[#3c4651]">
 
         <span className="text-[12px] text-[#aeb5bd]">
@@ -645,128 +431,59 @@ export default function Dashboard() {
 
       </footer>
 
-      {/* ================================= */}
       {/* ADD / EDIT MODAL */}
-      {/* ================================= */}
-
       {showModal && (
-
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-
           <div className="w-full max-w-[520px] rounded-md bg-white shadow-xl">
-
             {/* Modal Header */}
             <div className="flex items-center justify-between border-b px-6 py-4">
-
               <h2 className="text-lg font-semibold text-gray-700">
-
                 {editingRequest
                   ? "Edit Shift Change Request"
                   : "Add Shift Change Request"}
-
               </h2>
-
-              <button
-                type="button"
-                onClick={closeModal}
-                className="text-gray-400 hover:text-gray-700"
-              >
+              <button type="button" onClick={closeModal} className="text-gray-400 hover:text-gray-700">
                 <X size={20} />
               </button>
-
             </div>
 
             {/* Form */}
             <form onSubmit={handleSubmit}>
-
               <div className="space-y-4 px-6 py-5">
-
                 {/* Current Shift */}
                 <div>
-
                   <label className="mb-1 block text-sm font-medium text-gray-700">
                     Current Shift
                   </label>
+                  <select name="currentShift" value={formData.currentShift} onChange={handleChange} required
+                    className="h-[38px] w-full rounded border border-gray-300 px-3 text-sm outline-none focus:border-blue-400">
 
-                  <select
-                    name="currentShift"
-                    value={formData.currentShift}
-                    onChange={handleChange}
-                    required
-                    className="h-[38px] w-full rounded border border-gray-300 px-3 text-sm outline-none focus:border-blue-400"
-                  >
-
-                    <option value="">
-                      Select Current Shift
-                    </option>
-
-                    <option value="Morning Shift">
-                      Morning Shift
-                    </option>
-
-                    <option value="General Shift">
-                      General Shift
-                    </option>
-
-                    <option value="Evening Shift">
-                      Evening Shift
-                    </option>
-
-                    <option value="Night Shift">
-                      Night Shift
-                    </option>
-
+                    <option value="">Select Current Shift</option>
+                    <option value="Morning Shift">Morning Shift</option>
+                    <option value="General Shift">General Shift</option>
+                    <option value="Evening Shift">Evening Shift</option>
+                    <option value="Night Shift">Night Shift</option>
                   </select>
-
                 </div>
 
                 {/* Requested Shift */}
                 <div>
+                  <label className="mb-1 block text-sm font-medium text-gray-700">Requested Shift</label>
+                  <select name="requestedShift" value={formData.requestedShift} onChange={handleChange} required
+                    className="h-[38px] w-full rounded border border-gray-300 px-3 text-sm outline-none focus:border-blue-400">
 
-                  <label className="mb-1 block text-sm font-medium text-gray-700">
-                    Requested Shift
-                  </label>
-
-                  <select
-                    name="requestedShift"
-                    value={formData.requestedShift}
-                    onChange={handleChange}
-                    required
-                    className="h-[38px] w-full rounded border border-gray-300 px-3 text-sm outline-none focus:border-blue-400"
-                  >
-
-                    <option value="">
-                      Select Requested Shift
-                    </option>
-
-                    <option value="Morning Shift">
-                      Morning Shift
-                    </option>
-
-                    <option value="General Shift">
-                      General Shift
-                    </option>
-
-                    <option value="Evening Shift">
-                      Evening Shift
-                    </option>
-
-                    <option value="Night Shift">
-                      Night Shift
-                    </option>
-
+                    <option value="">Select Requested Shift</option>
+                    <option value="Morning Shift">Morning Shift</option>
+                    <option value="General Shift">General Shift</option>
+                    <option value="Evening Shift">Evening Shift</option>
+                    <option value="Night Shift">Night Shift</option>
                   </select>
-
                 </div>
 
                 {/* Dates */}
                 <div className="grid grid-cols-2 gap-4">
-
                   <div>
-
-                    <label className="mb-1 block text-sm font-medium text-gray-700">
-                      From Date
-                    </label>
+                    <label className="mb-1 block text-sm font-medium text-gray-700">From Date</label>
 
                     <input
                       type="date"
@@ -851,10 +568,7 @@ export default function Dashboard() {
 
       )}
 
-      {/* ================================= */}
       {/* VIEW MODAL */}
-      {/* ================================= */}
-
       {viewingRequest && (
 
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
