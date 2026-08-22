@@ -1,0 +1,12 @@
+{
+  "addtask": [
+    {
+      "taskname": "what is github",
+      "priority": "High",
+      "addeddate": "2026-08-08",
+      "details": "learn about github and how to uploade data in github in 3 days\n",
+      "id": "15Ylosw-wEE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -28,7 +28,7 @@ export default function AddTask() {
 
     // API Call
     axios
-      .post("http://localhost:8000/addtask", insertTaskData)
+      .get("http://brijeshguru.com/api/add_product.php", { params: insertTaskData })
 
       .then(() => {
 
