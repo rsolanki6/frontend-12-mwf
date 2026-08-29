@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "../Pages/";
+import Avatar from "../assets/avatar.png";
 
 export default function Home() {
   return (
